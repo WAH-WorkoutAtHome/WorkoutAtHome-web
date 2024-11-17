@@ -1,1 +1,4 @@
-console.log("Irwiin jawaaaaaaaaa");
+
+import 'regenerator-runtime';
+import '../styles/style.css';
+import '../styles/responsive.css';
