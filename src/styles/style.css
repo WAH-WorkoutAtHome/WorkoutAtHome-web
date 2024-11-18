@@ -76,12 +76,24 @@ body {
   text-decoration: none;
   color: #ffffff;
   padding: 8px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold; 
 }
 
+.app-bar .app-bar__navigation ul li a.login-btn {
+  background-color: #6CF3E5; 
+  color: #000000; 
+  border-radius: 30px; 
+  padding: 10px 16px; 
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.app-bar .app-bar__navigation ul li a.login-btn:hover {
+  background-color: #4cc3b3; 
+  transform: scale(1.05); 
+}
+
 main {
-  padding: 32px;
   flex: 1;
 }
 
@@ -96,24 +108,26 @@ main {
 
 .hero {
   text-align: center;
-  padding: 40px 20px;
+  margin-bottom: 30px;
 }
 
 .hero-images {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
 }
 
 .hero-images img {
-  width: 45%;
-  border-radius: 10px;
+  width: 100%;
+  height: auto; 
+  max-height: 350px; 
+  object-fit: cover;
 }
+
 
 .hero-quote {
   font-size: 18px;
-  margin-bottom: 20px;
+  padding: 30px;
   font-style: italic;
 }
 
@@ -121,7 +135,7 @@ main {
   padding: 10px 20px;
   background-color: #6CF3E5;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -139,14 +153,16 @@ main {
 }
 
 .chat-widget img {
-  width: 50px;
+  width: 44px; 
+  height: 44px; 
   cursor: pointer;
 }
 
 .features {
-  background: linear-gradient(180deg, #2b3dff, #4cc8ff);
+  background: linear-gradient(180deg, #4225EB, #251585);
   text-align: center;
   padding: 50px 20px;
+  margin: 0 auto;
 }
 
 .features-title {
@@ -169,13 +185,13 @@ main {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0px 55px;
+  gap: 30px;
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #b3ffff, #e6ffff);
+  background: linear-gradient(135deg, #6CF3E5, #ffffff);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -206,17 +222,17 @@ main {
 }
 
 .about-section {
-  background: linear-gradient(180deg, #2b3dff, #4cc8ff);
+  background: linear-gradient(180deg,  #4225EB, #251585);
   text-align: center;
   padding: 30px;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+    padding: 50px;
+    gap: 30px;
 }
 
 .image-section img {
@@ -226,7 +242,7 @@ main {
 }
 
 .content-section {
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .content-section h1 {
@@ -245,6 +261,7 @@ main {
   padding: 15px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  display: grid;
 }
 
 .card h2 {
@@ -262,15 +279,24 @@ main {
   text-decoration: none;
   font-size: 18px;
   color: #fff;
-  background: #007bff;
-  padding: 5px 10px;
+  background: #4225EB;
+  padding: 0;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   text-align: center;
+  line-height: 44px;
+  justify-self: end; /* Pindahkan tombol ke kanan */
 }
 
 .about-section h1 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+
+.about-section {
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .team-container {
@@ -286,24 +312,32 @@ main {
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+}
+
+.profile-pic {
+  margin-bottom: 10px;
 }
 
 .profile-pic img {
-  width: 100px;  
-  height: 100px; 
-  border-radius: 50%;  
-  object-fit: cover; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .team-member h2 {
   font-size: 18px;
   margin: 10px 0 5px 0;
+  color: #000000;
 }
 
 .role {
   font-size: 14px;
-  color: #888;
+  color: #777;
   margin-bottom: 15px;
 }
 
@@ -311,17 +345,30 @@ main {
   background-color: #d5f9f6;
   padding: 10px;
   border-radius: 10px;
+  margin-top: auto;
 }
 
 .motivation h3 {
   font-size: 14px;
   margin-bottom: 5px;
+  color: #000000;
 }
 
 .motivation p {
   font-size: 13px;
-  color: #555;
+  color: #777;
   line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  box-orient: vertical; 
+  line-clamp: 4;
+}
+
+.team-member .role {
+  color: #777;
 }
 
 .footer {
@@ -347,7 +394,7 @@ main {
 
 .footer-logo {
   max-width: 50px; 
-  margin-bottom: 10px;
+  margin-right: 20px; /* Menambahkan ruang antara logo dan paragraf */
 }
 
 .footer-section h3 {
@@ -358,6 +405,10 @@ main {
 .footer-section p {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.footer-section p {
+  flex: 1; /* Memberikan ruang untuk teks agar tidak saling tumpang tindih */
 }
 
 .social-icons a {
