@@ -8,7 +8,7 @@ const DashboardGuest = {
             <img src="./images/heroes/dashboard2.png" alt="Workout 2">
           </div>
           <p class="hero-quote">"Raih kebugaran dari rumah. Langkah kecil hari ini, kesehatan lebih baik esok hari."</p>
-          <button class="join-button"><a href="#/login">Gabung Sekarang</a></button>
+          <button class="join-button"><a href="#login">Gabung Sekarang</a></button>
         </section>
   
         <!-- Features Section -->
@@ -127,12 +127,12 @@ const DashboardGuest = {
     },
   
     async afterRender() {
-      // Event listener untuk tombol login
-      const loginBtn = document.querySelector('.login-btn');
-      loginBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.href = '#/login';
-      });
+      const loginButton = document.getElementById('loginButton');
+
+        loginButton.addEventListener('click', () => {
+            // Redireksi ke server OAuth (backend)
+            window.location.href = 'http://localhost:3000/auth/google';
+        });
     },
   };
   
