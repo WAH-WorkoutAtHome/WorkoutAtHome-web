@@ -8,7 +8,7 @@ const DashboardGuest = {
             <img src="./images/heroes/dashboard2.png" alt="Workout 2">
           </div>
           <p class="hero-quote">"Raih kebugaran dari rumah. Langkah kecil hari ini, kesehatan lebih baik esok hari."</p>
-          <button class="join-button"><a href="#login">Gabung Sekarang</a></button>
+          <button class="join-button"><a class="loginButton" href="#login">Gabung Sekarang</a></button>
         </section>
   
         <!-- Features Section -->
@@ -127,14 +127,28 @@ const DashboardGuest = {
     },
   
     async afterRender() {
-      const loginButton = document.getElementById('loginButton');
+      const loginButton = document.querySelectorAll('.loginButton');
+      // const loginButton2 = document.getElementById('loginButton2');
 
-        loginButton.addEventListener('click', () => {
-            // Redireksi ke server OAuth (backend)
-            window.location.href = 'http://localhost:3000/auth/google';
-        });
+      const googleLogin = () => {
+        // Redireksi ke server OAuth (backend)
+        window.location.href = 'http://localhost:3000/auth/google';
+    }
+
+      loginButton.forEach(el => {
+        el.addEventListener('click', googleLogin);
+      })
+
+      // loginButton.addEventListener('click', googleLogin);
+      // loginButton2.addEventListener('click', googleLogin);
+
+      // Cek jika user sudah login
+      if (localStorage.getItem('userToken')) {
+          // Jika sudah login, redirect ke dashboard-user
+          window.location.href = '/#dashboard-user';
+      }
     },
-  };
+};
   
   export default DashboardGuest;
   

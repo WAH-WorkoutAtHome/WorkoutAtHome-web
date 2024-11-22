@@ -4,11 +4,11 @@ const DashboardUser = {
         <!-- Hero Section -->
         <section class="hero">
           <div class="hero-images">
+            <img src="./images/heroes/dashboard1.png" alt="Workout 1">
             <img src="./images/heroes/dashboard2.png" alt="Workout 2">
           </div>
-          <h1 class="features-title-user">Selamat Datang, User</h1>
-          <p class="hero-quote">"Mulai perjalanan kebugaran Anda di sini dan capai tujuan sehat dengan latihan yang bisa dilakukan di rumah."</p>
-          <button class="join-button"><a href="#fitur">Mulai Sekarang</a></button>
+          <p class="hero-quote">"Raih kebugaran dari rumah. Langkah kecil hari ini, kesehatan lebih baik esok hari."</p>
+          <button class="join-button"><a id="loginButton2">Gabung Sekarang</a></button>
         </section>
   
         <!-- Features Section -->
