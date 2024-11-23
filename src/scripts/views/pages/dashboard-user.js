@@ -2,14 +2,16 @@ const DashboardUser = {
     async render() {
       return `
         <!-- Hero Section -->
-        <section class="hero">
-          <div class="hero-images">
-            <img src="./images/heroes/dashboard1.png" alt="Workout 1">
-            <img src="./images/heroes/dashboard2.png" alt="Workout 2">
-          </div>
-          <p class="hero-quote">"Raih kebugaran dari rumah. Langkah kecil hari ini, kesehatan lebih baik esok hari."</p>
-          <button class="join-button"><a id="loginButton2">Gabung Sekarang</a></button>
-        </section>
+        <section class="hero-user">
+        <div class="hero-content-user">
+          <h1 class="hero-title">Selamat Datang, User</h1>
+          <p class="hero-quote-user">Mulai perjalanan kebugaran Anda di sini dan capai tujuan sehat dengan latihan yang bisa dilakukan di rumah.</p>
+          <button class="join-button"><a href="fitur">Mulai Sekarang</a></button>
+        </div>
+        <div class="hero-images-user">
+          <img src="./images/heroes/dashboard2.png" alt="Workout 2">
+        </div>
+          </section>
   
         <!-- Features Section -->
         <section class="features" id="fitur">
@@ -123,11 +125,24 @@ const DashboardUser = {
             </div>
           </div>
         </section>
+
+            <!-- Chat Widget -->
+    <div class="chat-widget">
+      <img src="./images/icon/chatbot.png" alt="Chat Widget">
+    </div>
       `;
     },
    
     async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
+      const logoutButton = document.getElementById('logoutButton');
+
+      // Fungsi logout
+      const logout = () => {
+        localStorage.removeItem('userToken'); // Hapus token
+        window.location.href = '/#/'; // Redirect ke halaman guest
+      };
+  
+      logoutButton.addEventListener('click', logout);
     },
   };
    

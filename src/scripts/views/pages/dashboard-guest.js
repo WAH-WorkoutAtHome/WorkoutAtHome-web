@@ -1,6 +1,7 @@
 const DashboardGuest = {
     async render() {
       return `
+      
         <!-- Hero Section -->
         <section class="hero">
           <div class="hero-images">
@@ -123,6 +124,11 @@ const DashboardGuest = {
             </div>
           </div>
         </section>
+
+            <!-- Chat Widget -->
+    <div class="chat-widget">
+      <img src="./images/icon/chatbot.png" alt="Chat Widget">
+    </div>
       `;
     },
   
@@ -142,10 +148,10 @@ const DashboardGuest = {
       // loginButton.addEventListener('click', googleLogin);
       // loginButton2.addEventListener('click', googleLogin);
 
-      // Cek jika user sudah login
-      if (localStorage.getItem('userToken')) {
-          // Jika sudah login, redirect ke dashboard-user
-          window.location.href = '/#dashboard-user';
+      // Cek login
+      const userToken = localStorage.getItem('userToken');
+      if (userToken) {
+        window.location.href = '/#/dashboard-user';
       }
     },
 };

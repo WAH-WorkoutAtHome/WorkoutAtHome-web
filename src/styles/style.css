@@ -125,12 +125,47 @@ main {
   object-fit: cover;
 }
 
-
 .hero-quote {
   font-size: 18px;
   padding: 30px;
   font-style: italic;
 }
+
+.hero-quote-user {
+  font-size: 18px;
+  padding: 30px;
+  text-align: center
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.hero-user {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.hero-images-user img{
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+
+.hero-content-user {
+  justify-items: center;
+  align-content: center;
+}
+
+.profile-button img {
+  width: 50px;
+}
+
 
 .join-button {
   padding: 10px 20px;
