@@ -3,7 +3,7 @@ const DashboardGuest = {
       return `
       
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="hero">
           <div class="hero-images">
             <img src="./images/heroes/dashboard1.png" alt="Workout 1">
             <img src="./images/heroes/dashboard2.png" alt="Workout 2">

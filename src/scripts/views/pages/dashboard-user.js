@@ -2,7 +2,7 @@ const DashboardUser = {
     async render() {
       return `
         <!-- Hero Section -->
-        <section class="hero-user">
+        <section class="hero-user" id="hero-user">
         <div class="hero-content-user">
           <h1 class="hero-title">Selamat Datang, User</h1>
           <p class="hero-quote-user">Mulai perjalanan kebugaran Anda di sini dan capai tujuan sehat dengan latihan yang bisa dilakukan di rumah.</p>
@@ -130,19 +130,13 @@ const DashboardUser = {
     <div class="chat-widget">
       <img src="./images/icon/chatbot.png" alt="Chat Widget">
     </div>
+
+    
       `;
     },
    
     async afterRender() {
-      const logoutButton = document.getElementById('logoutButton');
-
-      // Fungsi logout
-      const logout = () => {
-        localStorage.removeItem('userToken'); // Hapus token
-        window.location.href = '/#/'; // Redirect ke halaman guest
-      };
-  
-      logoutButton.addEventListener('click', logout);
+     
     },
   };
    
