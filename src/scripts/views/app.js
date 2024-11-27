@@ -23,8 +23,10 @@ class App {
       this._header.innerHTML = await NavbarUser.render();
       await NavbarUser.afterRender();
     } else if (resource === 'tutorial') {
-      this._header.innerHTML = await Tutorial.render();
-      await Tutorial.afterRender();  
+      this._header.innerHTML = await NavbarUser.render();
+      await NavbarUser.afterRender();
+      // this._header.innerHTML = await Tutorial.render();
+      // await Tutorial.afterRender();  
     } 
   }
 
