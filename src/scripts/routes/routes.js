@@ -10,7 +10,7 @@ const routes = {
   '/dashboard-user': DashboardUser,
   '/kalendar': Kalendar,
   '/tutorial': Tutorial,
-  '/kalkulator-gizi': KalkulatorGizi,
+  '/kalkulator-gizi': KalkulatorGizi
 };
  
 export default routes;

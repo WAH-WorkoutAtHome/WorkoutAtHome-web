@@ -5,7 +5,6 @@ const KalkulatorGizi= {
     },
 
     async afterRender() {
-        
       },
     };
   
