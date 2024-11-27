@@ -66,10 +66,10 @@ const DashboardGuest = {
           <div class="content-section">
             <h1>Artikel</h1>
             <p>Olahraga di rumah atau Workout at home sangat disarankan karena memungkinkan Anda menjaga kebugaran tanpa pergi ke gym. Dengan rutinitas yang fleksibel, berbagai latihan bisa dilakukan dengan peralatan sederhana atau tanpa alat sama sekali. Keuntungannya adalah kenyamanan dan efisiensinya, karena dapat dilakukan kapan saja sesuai jadwal pribadi, tanpa biaya gym. Banyak aplikasi dan platform menawarkan program latihan yang dapat disesuaikan dengan tingkat kebugaran, menjadikan workout at home solusi efektif untuk mencapai kesehatan optimal secara terjangkau.</p>
-            <div class="card">
-              <h2>Judul</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet turpis ut ligula luctus scelerisque...</p>
-              <a href="#" class="button">→</a>
+             <div class="card">
+              <h2>Manfaat Utama</h2>
+              <p>Berolahraga secara teratur membantu memperkuat otot, meningkatkan sirkulasi darah, dan menjaga keseimbangan mental. Ini adalah solusi efektif untuk hidup sehat tanpa harus pergi ke gym.</p>
+              <a href="https://www.alodokter.com/beragam-manfaat-olahraga" class="button">→</a>
             </div>
           </div>
         </section>

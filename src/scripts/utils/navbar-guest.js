@@ -9,7 +9,7 @@ const NavbarGuest = {
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
           <ul>
-            <li><a href="#hero">BERANDA</a></li>
+            <li><a href="/#/dashboard-guest">BERANDA</a></li>
             <li><a href="#fitur">FITUR</a></li>
             <li><a href="#tentangkami">TENTANG KAMI</a></li>
             <li>
