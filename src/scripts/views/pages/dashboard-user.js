@@ -134,15 +134,15 @@ const DashboardUser = {
     },
    
     async afterRender() {
-      const logoutButton = document.getElementById('logoutButton');
+      // const logoutButton = document.getElementById('logoutButton');
 
-      // Fungsi logout
-      const logout = () => {
-        localStorage.removeItem('userToken'); // Hapus token
-        window.location.href = '/#/'; // Redirect ke halaman guest
-      };
+      // // Fungsi logout
+      // const logout = () => {
+      //   localStorage.removeItem('userToken'); // Hapus token
+      //   window.location.href = '/#/'; // Redirect ke halaman guest
+      // };
   
-      logoutButton.addEventListener('click', logout);
+      // logoutButton.addEventListener('click', logout);
     },
   };
    

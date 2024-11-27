@@ -1,8 +1,9 @@
-import DrawerInitiator from '../utils/drawer-initiator';
+// import DrawerInitiator from '../utils/drawer-initiator';
 import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 import NavbarGuest from '../utils/navbar-guest';
 import NavbarUser from '../utils/navbar-user';
+import Tutorial from './pages/tutorial';
 
 class App {
   constructor({ header, content }) {
@@ -21,10 +22,10 @@ class App {
     } else if (resource === 'dashboard-user') {
       this._header.innerHTML = await NavbarUser.render();
       await NavbarUser.afterRender();
-    } else {
-      this._header.innerHTML = await NavbarGuest.render();
-      await NavbarGuest.afterRender();
-    }
+    } else if (resource === 'tutorial') {
+      this._header.innerHTML = await Tutorial.render();
+      await Tutorial.afterRender();  
+    } 
   }
 
   async renderPage() {
