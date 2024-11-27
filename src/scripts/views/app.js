@@ -16,14 +16,17 @@ class App {
     const { resource } = url;
 
     // Tentukan navbar berdasarkan halaman
-    if (resource === 'dashboard-guest') {
+    if (resource === 'dashboard-guest' ||
+      resource === 'biodata'
+    ) {
       this._header.innerHTML = await NavbarGuest.render();
       await NavbarGuest.afterRender();
     } else if (
       resource === 'dashboard-user' ||
       resource === 'kalendar' ||
       resource === 'tutorial' ||
-      resource === 'kalkulator-gizi'
+      resource === 'kalkulator-gizi' ||
+      resource === 'profile'
     ) {
       this._header.innerHTML = await NavbarUser.render();
       await NavbarUser.afterRender();
@@ -40,7 +43,9 @@ class App {
     // Render footer hanya untuk halaman tertentu
     if (
       resource === 'dashboard-guest' ||
-      resource === 'dashboard-user'
+      resource === 'dashboard-user' ||
+      resource === 'tutorial'
+
     ) {
       this._footer.innerHTML = await Footer.render();
       await Footer.afterRender();

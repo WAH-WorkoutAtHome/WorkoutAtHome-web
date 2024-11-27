@@ -1,6 +1,8 @@
 const Footer = {
     render() {
-      return ` <div class="footer-container">
+      return `
+      <section  class="footer">
+      <div class="footer-container">
             <div class="footer-section logo-text">
                 <img src="./images/heroes/WAH-logo.jpeg" alt="Logo WAH" class="footer-logo">
                 <p>Workout at Home adalah platform yang menyediakan berbagai program latihan di rumah untuk membantu Anda mencapai tujuan kebugaran dengan mudah dan efektif.</p>
@@ -22,6 +24,7 @@ const Footer = {
         <div class="footer-bottom">
             <p>Copyright © 2024, WAH</p>
         </div>
+        </section>
         `;
     },
 
