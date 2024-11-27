@@ -12,9 +12,9 @@ const NavbarUser = {
           <li><a href="/#/dashboard-user">BERANDA</a></li>
           <li><a href="/#/kalendar">KALENDAR</a></li>
           <li><a href="/#/tutorial">TUTORIAL</a></li>
-          <li><a href="/#/kalkulatorgizi">KALKULATOR GIZI</a></li>
+          <li><a href="/#/kalkulator-gizi">KALKULATOR GIZI</a></li>
           <li>
-            <a href="#profile" class="profile-button">
+            <a href="/#/profile" class="profile-button">
               <img src="./images/icon/profile.png" alt="Profile"/>
             </a>
           </li>
