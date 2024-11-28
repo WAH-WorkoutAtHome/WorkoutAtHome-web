@@ -6,15 +6,20 @@ import KalkulatorGizi from '../views/pages/kalkulator-gizi';
 import Profile from '../views/pages/profile';
 import Biodata from '../views/pages/biodata';
 
+const getDefaultRoute = () => {
+  const userToken = localStorage.getItem('userToken');
+  return userToken ? '/dashboard-user' : '/dashboard-guest';
+};
+
 const routes = {
-  '/': DashboardGuest,
+  '/': getDefaultRoute(),
   '/dashboard-guest': DashboardGuest,
   '/biodata': Biodata,
   '/dashboard-user': DashboardUser,
   '/kalendar': Kalendar,
   '/tutorial': Tutorial,
   '/kalkulator-gizi': KalkulatorGizi,
-  '/profile': Profile
+  '/profile': Profile,
 };
- 
+
 export default routes;

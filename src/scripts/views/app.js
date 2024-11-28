@@ -16,9 +16,7 @@ class App {
     const { resource } = url;
 
     // Tentukan navbar berdasarkan halaman
-    if (resource === 'dashboard-guest' ||
-      resource === 'biodata'
-    ) {
+    if (resource === 'dashboard-guest' || resource === 'biodata') {
       this._header.innerHTML = await NavbarGuest.render();
       await NavbarGuest.afterRender();
     } else if (
@@ -37,28 +35,16 @@ class App {
   }
 
   async _renderFooter() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const { resource } = url;
-
-    // Render footer hanya untuk halaman tertentu
-    if (
-      resource === 'dashboard-guest' ||
-      resource === 'dashboard-user' ||
-      resource === 'tutorial'
-
-    ) {
-      this._footer.innerHTML = await Footer.render();
-      await Footer.afterRender();
-    } else {
-      this._footer.innerHTML = ''; // Bersihkan elemen footer untuk halaman lain
-    }
+    // Render footer di semua halaman
+    this._footer.innerHTML = await Footer.render();
+    await Footer.afterRender();
   }
 
   async renderPage() {
     // Render header sesuai halaman
     await this._renderHeader();
 
-    // Render footer sesuai halaman
+    // Render footer di semua halaman
     await this._renderFooter();
 
     // Render main content

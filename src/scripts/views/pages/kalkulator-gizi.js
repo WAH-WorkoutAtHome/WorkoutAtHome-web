@@ -17,7 +17,7 @@ const KalkulatorGizi= {
       color: #000;
     }
 
-    p {
+    .calculator-title p {
       text-align: center;
       max-width: 600px;
       margin: 10px auto 0px;
@@ -96,9 +96,10 @@ const KalkulatorGizi= {
       margin: 10px 0;
     }
   </style>
+  <div class="calculator-title">
        <h1>Hitung Kalori Harian Anda dengan Mudah!</h1>
   <p>Fitur ini membantu Anda merencanakan pola makan yang tepat untuk mencapai tujuan kebugaran, baik itu menurunkan berat badan, membentuk otot, atau menjaga kebugaran secara umum.</p>
-
+  </div>
   <div class="container">
     <!-- Kalkulator Harian -->
     <div class="box">
