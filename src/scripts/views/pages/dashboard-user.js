@@ -1,6 +1,6 @@
 const DashboardUser = {
-    async render() {
-      return `
+  async render() {
+    return `
         <!-- Hero Section -->
         <section class="hero-user" id="hero-user">
         <div class="hero-content-user">
@@ -133,11 +133,9 @@ const DashboardUser = {
 
     
       `;
-    },
-   
-    async afterRender() {
-     
-    },
-  };
-   
-  export default DashboardUser;
+  },
+
+  async afterRender() {},
+};
+
+export default DashboardUser;

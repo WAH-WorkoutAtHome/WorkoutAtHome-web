@@ -1,6 +1,6 @@
-const Profile= {
-    render() {
-      return ` 
+const Profile = {
+  render() {
+    return ` 
      <style>
   body {
     font-family: 'Poppins', sans-serif;
@@ -133,11 +133,9 @@ const Profile= {
         </form>
       </div>
         `;
-    },
+  },
 
-    async afterRender() {
-      
-      },
-    };
-  
-  export default Profile;
+  async afterRender() {},
+};
+
+export default Profile;
