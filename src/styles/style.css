@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: white;
   min-height: 100vh;
   display: flex;
@@ -59,7 +59,6 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-
   display: flex;
   align-items: center;
   width: 150px;
@@ -89,13 +88,13 @@ body {
 
 #loginButton {
   padding: 10px 20px;
-    background-color: #6CF3E5;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #000;
+  background-color: #6cf3e5;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
 }
 
 main {
@@ -116,21 +115,21 @@ main {
   margin-bottom: 30px;
 }
 
-.temp-container{
+.temp-container {
   height: 400px;
 }
 
-.upper-body-container{
+.upper-body-container {
   margin-top: 100px;
 }
 
-.hero-img-container{
+.hero-img-container {
   /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
   object-fit: cover;
-  background: url('../public/images/heroes/tutorial1.png');
+  background: url("../public/images/heroes/tutorial1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -165,8 +164,8 @@ main {
 
 .hero-images-guest img {
   width: 100%;
-  height: auto; 
-  max-height: 350px; 
+  height: auto;
+  max-height: 350px;
   object-fit: cover;
 }
 
@@ -179,7 +178,7 @@ main {
 .hero-quote-user {
   font-size: 18px;
   padding: 30px;
-  text-align: center
+  text-align: center;
 }
 
 .hero-title {
@@ -193,7 +192,7 @@ main {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.hero-images-user img{
+.hero-images-user img {
   width: 100%;
   height: auto;
   max-height: 500px;
@@ -226,10 +225,9 @@ main {
   width: 44px;
 }
 
-
 .join-button {
   padding: 10px 20px;
-  background-color: #6CF3E5;
+  background-color: #6cf3e5;
   border: none;
   border-radius: 30px;
   font-size: 16px;
@@ -243,7 +241,6 @@ a {
   color: black;
 }
 
-
 .join-button:hover {
   background-color: #3ecce9e2;
 }
@@ -255,13 +252,13 @@ a {
 }
 
 .chat-widget img {
-  width: 44px; 
-  height: 44px; 
+  width: 44px;
+  height: 44px;
   cursor: pointer;
 }
 
 .features {
-  background: linear-gradient(180deg, #4225EB, #251585);
+  background: linear-gradient(180deg, #4225eb, #251585);
   text-align: center;
   padding: 50px 20px;
   margin: 0 auto;
@@ -301,7 +298,7 @@ a {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #6CF3E5, #ffffff);
+  background: linear-gradient(135deg, #6cf3e5, #ffffff);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -332,22 +329,17 @@ a {
 }
 
 .about-section {
-  background: linear-gradient(180deg,  #4225EB, #251585);
+  background: linear-gradient(180deg, #4225eb, #251585);
   text-align: center;
   padding: 30px;
 }
 
 .container {
   display: grid;
-    max-width: 1200px;
-    padding: 50px;
-    gap: 30px;
-    justify-content: center;
-}
-
-.container-hero {
-  text-align: center;
-    margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  padding: 50px;
+  gap: 30px;
 }
 
 .image-section img {
@@ -357,9 +349,9 @@ a {
 }
 
 .image-section-hero img {
-    height: auto;
-    max-height: 350px;
-    object-fit: cover;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
 }
 
 .content-section {
@@ -380,8 +372,8 @@ a {
 
 .content-section-hero {
   display: grid;
-      padding: 35px;
-      gap: 26px;
+  padding: 35px;
+  gap: 26px;
 }
 
 .content-section-hero p {
@@ -410,6 +402,21 @@ a {
 .card p {
   font-size: 14px;
   color: #777;
+}
+
+.card .button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background: #4225eb;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 44px;
+  justify-self: end; /* Pindahkan tombol ke kanan */
 }
 
 .about-section h1 {
@@ -476,7 +483,6 @@ a {
   text-align: center; /* Ratakan teks di tengah */
 }
 
-
 .motivation h3 {
   font-size: 14px;
   margin-bottom: 5px;
@@ -495,8 +501,8 @@ a {
 }
 
 .footer {
-  background-color: #000; 
-  color: #fff; 
+  background-color: #000;
+  color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
 }
@@ -516,7 +522,7 @@ a {
 }
 
 .footer-logo {
-  max-width: 50px; 
+  max-width: 50px;
   margin-right: 20px; /* Menambahkan ruang antara logo dan paragraf */
 }
 
@@ -544,73 +550,24 @@ a {
   height: 24px;
 }
 
+.logout-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #fff; 
+  border-top: 1px solid #fff;
   padding-top: 10px;
   margin-top: 20px;
   font-size: 14px;
-}
-
-/* Hero Section for Tutorial */
-.hero-tutorial {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  /* background: url('../public/images/heroes/tutorial1.png') no-repeat center center/cover; */
-}
-
-section.hero-tutorial h2 {
-  font-size: 1.75rem; /* Adjust font size for emphasis */
-  text-align: center; /* Center align text */
-  margin-bottom: 20px; /* Add space below the title */
-  color: #333; /* Title color */
-}
-.hero-tutorial .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Overlay effect with dark background */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: #fff; /* White text color */
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.hero-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/* Video Grid for Tutorial */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.video-item {
-  aspect-ratio: 16 / 9; /* Ensures videos maintain correct aspect ratio */
-  background-color: #000; /* Placeholder color for videos */
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.video-item iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
 }

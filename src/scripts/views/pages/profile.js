@@ -1,6 +1,9 @@
 const Profile = {
   render() {
     return ` 
+const Profile = {
+  render() {
+    return ` 
      <style>
       body {
         font-family: 'Poppins', sans-serif;
