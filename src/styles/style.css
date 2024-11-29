@@ -59,9 +59,9 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-  position: absolute;
-  top: 50px;
-  left: -180px;
+
+  display: flex;
+  align-items: center;
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
@@ -71,6 +71,11 @@ body {
 
 .app-bar .app-bar__navigation.open {
   left: 0;
+}
+
+.app-bar .app-bar__navigation ul {
+  display: flex;
+  align-items: center;
 }
 
 .app-bar .app-bar__navigation ul li a {
@@ -111,10 +116,42 @@ main {
   margin-bottom: 30px;
 }
 
+.temp-container{
+  height: 400px;
+}
+
+.upper-body-container{
+  margin-top: 100px;
+}
+
+.hero-img-container{
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  background: url('../public/images/heroes/tutorial1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .hero-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  
+  height: 400px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero-text{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
 }
 
 .hero-images img {
@@ -502,4 +539,65 @@ a {
   font-size: 14px;
 }
 
+/* Hero Section for Tutorial */
+.hero-tutorial {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* background: url('../public/images/heroes/tutorial1.png') no-repeat center center/cover; */
+}
 
+section.hero-tutorial h2 {
+  font-size: 1.75rem; /* Adjust font size for emphasis */
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add space below the title */
+  color: #333; /* Title color */
+}
+.hero-tutorial .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay effect with dark background */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff; /* White text color */
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Video Grid for Tutorial */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.video-item {
+  aspect-ratio: 16 / 9; /* Ensures videos maintain correct aspect ratio */
+  background-color: #000; /* Placeholder color for videos */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
