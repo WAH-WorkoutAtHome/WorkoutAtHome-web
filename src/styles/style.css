@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: white;
   min-height: 100vh;
   display: flex;
@@ -84,13 +84,13 @@ body {
 
 #loginButton {
   padding: 10px 20px;
-    background-color: #6CF3E5;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #000;
+  background-color: #6cf3e5;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
 }
 
 main {
@@ -117,11 +117,10 @@ main {
   gap: 0;
 }
 
-
 .hero-images img {
   width: 100%;
-  height: auto; 
-  max-height: 350px; 
+  height: auto;
+  max-height: 350px;
   object-fit: cover;
 }
 
@@ -134,7 +133,7 @@ main {
 .hero-quote-user {
   font-size: 18px;
   padding: 30px;
-  text-align: center
+  text-align: center;
 }
 
 .hero-title {
@@ -145,10 +144,10 @@ main {
 
 .hero-user {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.hero-images-user img{
+.hero-images-user img {
   width: 100%;
   height: auto;
   max-height: 500px;
@@ -162,8 +161,8 @@ main {
 
 .hero-calendar {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 30px;
 }
 
 .hero-quote-calendar {
@@ -181,10 +180,9 @@ main {
   width: 44px;
 }
 
-
 .join-button {
   padding: 10px 20px;
-  background-color: #6CF3E5;
+  background-color: #6cf3e5;
   border: none;
   border-radius: 30px;
   font-size: 16px;
@@ -198,7 +196,6 @@ a {
   color: black;
 }
 
-
 .join-button:hover {
   background-color: #3ecce9e2;
 }
@@ -210,13 +207,13 @@ a {
 }
 
 .chat-widget img {
-  width: 44px; 
-  height: 44px; 
+  width: 44px;
+  height: 44px;
   cursor: pointer;
 }
 
 .features {
-  background: linear-gradient(180deg, #4225EB, #251585);
+  background: linear-gradient(180deg, #4225eb, #251585);
   text-align: center;
   padding: 50px 20px;
   margin: 0 auto;
@@ -256,7 +253,7 @@ a {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #6CF3E5, #ffffff);
+  background: linear-gradient(135deg, #6cf3e5, #ffffff);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -287,17 +284,17 @@ a {
 }
 
 .about-section {
-  background: linear-gradient(180deg,  #4225EB, #251585);
+  background: linear-gradient(180deg, #4225eb, #251585);
   text-align: center;
   padding: 30px;
 }
 
 .container {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 1200px;
-    padding: 50px;
-    gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1200px;
+  padding: 50px;
+  gap: 30px;
 }
 
 .image-section img {
@@ -344,7 +341,7 @@ a {
   text-decoration: none;
   font-size: 18px;
   color: #fff;
-  background: #4225EB;
+  background: #4225eb;
   padding: 0;
   width: 44px;
   height: 44px;
@@ -418,7 +415,6 @@ a {
   text-align: center; /* Ratakan teks di tengah */
 }
 
-
 .motivation h3 {
   font-size: 14px;
   margin-bottom: 5px;
@@ -437,8 +433,8 @@ a {
 }
 
 .footer {
-  background-color: #000; 
-  color: #fff; 
+  background-color: #000;
+  color: #fff;
   padding: 20px 0;
   font-family: Arial, sans-serif;
 }
@@ -458,7 +454,7 @@ a {
 }
 
 .footer-logo {
-  max-width: 50px; 
+  max-width: 50px;
   margin-right: 20px; /* Menambahkan ruang antara logo dan paragraf */
 }
 
@@ -486,12 +482,24 @@ a {
   height: 24px;
 }
 
+.logout-button {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #fff; 
+  border-top: 1px solid #fff;
   padding-top: 10px;
   margin-top: 20px;
   font-size: 14px;
 }
-
-
