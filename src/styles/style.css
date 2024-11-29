@@ -592,3 +592,41 @@ section.hero-tutorial h2 {
   height: 100%;
   border: none;
 }
+
+.search-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-container input {
+  width: 70%; /* Perkecil untuk memberikan ruang pada tombol */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Ujung kiri dibulatkan */
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #5a5959; /* Warna hijau untuk tombol */
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0; /* Ujung kanan dibulatkan */
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #232222; /* Warna hijau lebih gelap saat hover */
+}
+
+.search-container button:active {
+  background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
+}
+
+section {
+  margin: 20px 0;
+}
+
