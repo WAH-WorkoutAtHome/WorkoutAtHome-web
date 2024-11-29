@@ -538,6 +538,12 @@ a {
   /* background: url('../public/images/heroes/tutorial1.png') no-repeat center center/cover; */
 }
 
+section.hero-tutorial h2 {
+  font-size: 1.75rem; /* Adjust font size for emphasis */
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Add space below the title */
+  color: #333; /* Title color */
+}
 .hero-tutorial .overlay {
   position: absolute;
   top: 0;

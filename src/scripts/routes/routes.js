@@ -5,7 +5,6 @@ import Tutorial from '../views/pages/tutorial';
 import KalkulatorGizi from '../views/pages/kalkulator-gizi';
 import Profile from '../views/pages/profile';
 import Biodata from '../views/pages/biodata';
-import Tutorial from '../views/pages/tutorial';
 
 const routes = {
   '/': DashboardGuest,
@@ -13,7 +12,7 @@ const routes = {
   '/biodata': Biodata,
   '/dashboard-user': DashboardUser,
   '/kalendar': Kalendar,
-  '/tutorial': Tutorial,
+  '/tutorial': Tutorial,  
   '/kalkulator-gizi': KalkulatorGizi,
   '/profile': Profile,
   '/tutorial': Tutorial,

@@ -36,7 +36,10 @@ class App {
       await NavbarUser.afterRender();
       // this._header.innerHTML = await Tutorial.render();
       // await Tutorial.afterRender();  
-    } 
+    } else {
+      this._header.innerHTML = await NavbarGuest.render();
+      await NavbarUser.afterRender();
+    }
   }
 
   async _renderFooter() {
