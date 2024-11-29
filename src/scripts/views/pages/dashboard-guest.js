@@ -104,7 +104,7 @@ const DashboardGuest = {
               <div class="profile-pic">
                 <img src="./images/about/cana.jpg" alt="Front End 2">
               </div>
-              <h2>Ahsana Azmiara Ahmadiham</h2>
+              <h2>Ahsana Azmiara A.</h2>
               <p class="role">Front End</p>
               <div class="motivation">
                 <h3>Motivasi</h3>
@@ -134,20 +134,15 @@ const DashboardGuest = {
   
     async afterRender() {
       const loginButton = document.querySelectorAll('.loginButton');
-      // const loginButton2 = document.getElementById('loginButton2');
-
       const googleLogin = () => {
         // Redireksi ke server OAuth (backend)
         window.location.href = 'http://localhost:3000/auth/google';
-    }
-
+      };
+  
       loginButton.forEach(el => {
         el.addEventListener('click', googleLogin);
-      })
-
-      // loginButton.addEventListener('click', googleLogin);
-      // loginButton2.addEventListener('click', googleLogin);
-
+      });
+  
       // Cek login
       const userToken = localStorage.getItem('userToken');
       if (userToken) {

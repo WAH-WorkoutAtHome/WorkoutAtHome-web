@@ -6,7 +6,7 @@ const DashboardUser = {
         <div class="hero-content-user">
           <h1 class="hero-title">Selamat Datang, User</h1>
           <p class="hero-quote-user">Mulai perjalanan kebugaran Anda di sini dan capai tujuan sehat dengan latihan yang bisa dilakukan di rumah.</p>
-          <button class="join-button"><a href="fitur">Mulai Sekarang</a></button>
+          <button class="join-button"><a href="/#/tutorial">Mulai Sekarang</a></button>
         </div>
         <div class="hero-images-user">
           <img src="./images/heroes/dashboard2.png" alt="Workout 2">
@@ -105,7 +105,7 @@ const DashboardUser = {
               <div class="profile-pic">
                 <img src="./images/about/cana.jpg" alt="Front End 2">
               </div>
-              <h2>Ahsana Azmiara Ahmadiham</h2>
+              <h2>Ahsana Azmiara A.</h2>
               <p class="role">Front End</p>
               <div class="motivation">
                 <h3>Motivasi</h3>

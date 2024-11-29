@@ -446,8 +446,14 @@ a {
   background-color: #d5f9f6;
   padding: 10px;
   border-radius: 10px;
-  margin-top: auto;
+  min-height: 120px; /* Tinggi minimum sama untuk semua card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusatkan isi secara vertikal */
+  align-items: center; /* Pusatkan isi secara horizontal */
+  text-align: center; /* Ratakan teks di tengah */
 }
+
 
 .motivation h3 {
   font-size: 14px;
@@ -459,13 +465,7 @@ a {
   font-size: 13px;
   color: #777;
   line-height: 1.5;
-  overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  box-orient: vertical; 
-  line-clamp: 4;
 }
 
 .team-member .role {
