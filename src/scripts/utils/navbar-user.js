@@ -18,7 +18,6 @@ const NavbarUser = {
             <a href="/#/profile" class="profile-button">
               <img src="./images/icon/profile.png" alt="Profile"/>
             </a>
-            <button id="logoutButton" class="logout-button">Logout</button>
           </li>
         </ul>
       </nav>
@@ -28,7 +27,6 @@ const NavbarUser = {
   async afterRender() {
     const hamburgerButton = document.querySelector("#hamburgerButton");
     const navigationDrawer = document.querySelector("#navigationDrawer");
-    const logoutButton = document.querySelector("#logoutButton");
 
     // Toggle navigation drawer
     hamburgerButton.addEventListener("click", () => {
@@ -45,12 +43,6 @@ const NavbarUser = {
       }
     });
 
-    // Handle logout
-    logoutButton.addEventListener("click", () => {
-      localStorage.removeItem("userToken"); // Hapus token dari localStorage
-      alert("Anda telah berhasil logout."); // Tampilkan notifikasi
-      window.location.href = "/"; // Arahkan ke halaman awal
-    });
   },
 };
 

@@ -3,6 +3,8 @@
   margin: 0;
 }
 
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
@@ -135,9 +137,22 @@ main {
 }
 
 .hero-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  
+  height: 400px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero-text{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
 }
 
 .hero-images img {
@@ -524,20 +539,6 @@ a {
   height: 24px;
 }
 
-.logout-button {
-  background-color: #ff4d4d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.logout-button:hover {
-  background-color: #e60000;
-}
-
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #fff;
@@ -579,7 +580,5 @@ a {
   background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
 }
 
-section {
-  margin: 20px 0;
-}
+
 

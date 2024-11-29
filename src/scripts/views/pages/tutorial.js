@@ -5,7 +5,7 @@ const Tutorial = {
       <section class="hero">
         <div class="hero-img-container">
           <div class="hero-images">
-            <div></div>
+          
             <div class="hero-text">
               <h1>Mulai Latihan dengan<br/>Tutorial Kami!</h1>
               <p>
