@@ -60,20 +60,46 @@ const DashboardUser = {
         </section>
   
         <!-- Artikel Section -->
-        <section class="container">
-          <div class="image-section">
-            <img src="./images/heroes/artikel.png" alt="Exercise Image">
-          </div>
-          <div class="content-section">
-            <h1>Artikel</h1>
-            <p>Olahraga di rumah atau Workout at home sangat disarankan karena memungkinkan Anda menjaga kebugaran tanpa pergi ke gym. Dengan rutinitas yang fleksibel, berbagai latihan bisa dilakukan dengan peralatan sederhana atau tanpa alat sama sekali. Keuntungannya adalah kenyamanan dan efisiensinya, karena dapat dilakukan kapan saja sesuai jadwal pribadi, tanpa biaya gym. Banyak aplikasi dan platform menawarkan program latihan yang dapat disesuaikan dengan tingkat kebugaran, menjadikan workout at home solusi efektif untuk mencapai kesehatan optimal secara terjangkau.</p>
-             <div class="card">
-              <h2>Manfaat Utama</h2>
-              <p>Berolahraga secara teratur membantu memperkuat otot, meningkatkan sirkulasi darah, dan menjaga keseimbangan mental. Ini adalah solusi efektif untuk hidup sehat tanpa harus pergi ke gym.</p>
-              <a href="https://www.alodokter.com/beragam-manfaat-olahraga" class="button">→</a>
+        <section>
+            <div class="container">
+                <div class="image-section">
+                    <img src="./images/heroes/artikel.png" alt="Exercise Image">
+                </div>
+                <div class="content-section">
+                    <h1>Cara Efektif Memulai Workout di Rumah</h1>
+                    <p>Workout di rumah kini semakin populer karena fleksibilitas dan kemudahannya. Namun, banyak orang bingung bagaimana cara memulainya. Langkah pertama adalah menentukan tujuan. Apakah Anda ingin menurunkan berat badan, membangun otot, atau sekadar menjaga kebugaran? Setelah itu, buat jadwal rutin yang sesuai dengan aktivitas harian Anda.  
+                    </p>
+                    <p>Pilih area yang nyaman di rumah, pastikan memiliki ruang yang cukup untuk bergerak. Peralatan sederhana seperti matras yoga, resistance band, atau sepasang dumbbell sangat membantu, tetapi tidak wajib. Latihan bodyweight seperti push-up, plank, dan squat juga sangat efektif untuk melatih berbagai kelompok otot tanpa memerlukan alat.  
+                    </p>
+                    <p>Jangan lupa untuk memulai dengan pemanasan selama 5-10 menit untuk menghindari cedera dan akhiri latihan dengan pendinginan. Kuncinya adalah konsistensi dan menikmati proses. Ingat, setiap langkah kecil adalah kemajuan menuju kesehatan yang lebih baik!</p>
+                </div>
+                <div class="content-section">
+                    <h1>Manfaat Workout di Rumah untuk Kesehatan Fisik dan Mental</h1>
+                    <p>Banyak yang menganggap workout di rumah hanya membantu kebugaran fisik, tetapi manfaatnya jauh lebih luas. Secara fisik, workout di rumah membantu meningkatkan kekuatan otot, fleksibilitas, dan daya tahan tubuh. Bahkan olahraga ringan seperti stretching atau yoga dapat meningkatkan postur tubuh dan mengurangi risiko sakit punggung akibat duduk terlalu lama.  
+                    </p>
+                    <p>Sementara itu, manfaat mental dari olahraga sering kali tidak disadari. Aktivitas fisik memicu pelepasan endorfin, hormon yang membuat Anda merasa bahagia dan rileks. Latihan seperti yoga atau meditasi aktif dapat membantu meredakan stres, meningkatkan fokus, dan memberikan rasa tenang.  
+                    </p>
+                    <p>Keuntungan lain dari workout di rumah adalah fleksibilitas waktu. Anda dapat berlatih kapan saja, baik di pagi hari untuk memulai hari dengan energi positif atau di malam hari untuk melepas penat setelah bekerja. Tidak perlu khawatir tentang biaya gym atau perjalanan ke tempat fitness, menjadikan workout di rumah pilihan yang praktis dan efisien.</p>
+                </div>
+                <div class="image-section">
+                    <img src="./images/heroes/artikel2.jpg" alt="Exercise Image">
+                </div>
             </div>
-          </div>
+            <div class="container-hero">
+                <div class="image-section-hero">
+                    <img src="./images/heroes/artikel3.jpg" alt="Exercise Image">
+                </div>
+                 <div class="content-section-hero">
+                    <h1>Workout Sederhana yang Bisa Dilakukan di Rumah</h1>
+                    <p>Banyak orang berpikir bahwa olahraga di rumah membutuhkan peralatan mahal atau ruang yang luas, padahal sebenarnya tidak. Anda bisa mulai dengan latihan sederhana yang efektif untuk meningkatkan kebugaran tanpa alat tambahan. Latihan seperti squat atau lunges sangat bagus untuk memperkuat otot kaki dan bokong. Selain itu, push-up adalah pilihan klasik untuk membangun otot lengan dan dada tanpa memerlukan beban tambahan.  
+                    </p>
+                    <p>Jika Anda ingin meningkatkan kekuatan inti tubuh, plank adalah salah satu latihan terbaik yang bisa dilakukan. Latihan ini tidak hanya menguatkan otot perut tetapi juga punggung dan bahu Anda. Sementara itu, jumping jacks dapat menjadi alternatif untuk latihan kardio di ruang terbatas. Gerakan sederhana ini meningkatkan detak jantung sekaligus melatih seluruh tubuh.  
+                    </p>
+                    <p>Konsistensi adalah kunci dalam workout di rumah. Tidak perlu memulai dengan durasi yang panjang; cukup 15-20 menit sehari dapat membawa perubahan besar jika dilakukan secara rutin. Pastikan Anda melakukan pemanasan sebelum memulai untuk menghindari cedera, dan akhiri dengan pendinginan agar otot-otot Anda tetap fleksibel. Dengan rutinitas yang terencana dan kemauan kuat, olahraga di rumah dapat menjadi solusi yang mudah dan efektif untuk menjaga kebugaran tubuh Anda.</p>
+                </div>
+            </div>
         </section>
+
   
         <!-- Tentang Kami Section -->
         <section class="about-section" id="tentangkami">

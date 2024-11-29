@@ -135,6 +135,15 @@ main {
   background-size: cover;
 }
 
+.hero-images-guest {
+  
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .hero-images {
   
   height: 400px;
@@ -154,7 +163,7 @@ main {
 
 }
 
-.hero-images img {
+.hero-images-guest img {
   width: 100%;
   height: auto; 
   max-height: 350px; 
@@ -181,7 +190,7 @@ main {
 
 .hero-user {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .hero-images-user img{
@@ -194,12 +203,12 @@ main {
 .hero-content-user {
   justify-items: center;
   align-content: center;
+  
 }
 
 .hero-calendar {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .hero-quote-calendar {
@@ -379,6 +388,10 @@ a {
   margin-bottom: 20px;
   line-height: 1.5;
   color: #555;
+
+  max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {

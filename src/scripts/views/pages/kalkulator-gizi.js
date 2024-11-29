@@ -30,14 +30,22 @@ const KalkulatorGizi = {
           justify-content: center;
         }
 
+        @media screen and (max-width: 800px) {
+          .container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            }
+        }
+
         .box {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  width: 100%;
-  max-width: 400px;
-}
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.25);
+          padding: 20px;
+          width: 100%;
+          max-width: 400px;
+        }
 
 .box h2 {
   text-align: center;
