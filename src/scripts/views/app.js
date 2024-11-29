@@ -3,6 +3,7 @@ import UrlParser from "../routes/url-parser";
 import NavbarGuest from "../utils/navbar-guest";
 import NavbarUser from "../utils/navbar-user";
 import Footer from "../utils/footer";
+import Tutorial from './pages/tutorial';
 
 class App {
   constructor({ header, content, footer }) {
@@ -29,9 +30,14 @@ class App {
     ) {
       this._header.innerHTML = await NavbarUser.render();
       await NavbarUser.afterRender();
+    } else if (resource === 'tutorial') {
+      this._header.innerHTML = await NavbarUser.render();
+      await NavbarUser.afterRender();
+      // this._header.innerHTML = await Tutorial.render();
+      // await Tutorial.afterRender();  
     } else {
       this._header.innerHTML = await NavbarGuest.render();
-      await NavbarGuest.afterRender();
+      await NavbarUser.afterRender();
     }
   }
 

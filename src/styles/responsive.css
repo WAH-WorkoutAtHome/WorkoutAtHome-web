@@ -94,3 +94,123 @@
           margin: 0 auto;
         }
       }
+
+      /* Responsive Video Grid */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns for mobile */
+    gap: 12px; /* Reduce gap for smaller screens */
+  }
+
+  .video-item {
+    border-radius: 8px; /* Smaller radius for smaller screens */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .hero-tutorial {
+    height: 150px; /* Further reduce height */
+  }
+
+  .hero-content {
+    padding: 40px 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.25rem;
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .video-grid {
+    gap: 8px; /* Further reduce gap */
+  }
+
+  .video-item {
+    border-radius: 5px; /* Smaller border radius */
+  }
+}
+
+/* General Responsive Styles */
+@media (max-width: 1200px) {
+  .team-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk layar ukuran sedang */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+    gap: 15px; /* Kurangi jarak antar elemen */
+  }
+
+  .team-member {
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+  }
+
+  .profile-pic img {
+    width: 80px;
+    height: 80px; /* Sesuaikan ukuran gambar untuk layar kecil */
+  }
+
+  .team-member h2 {
+    font-size: 16px; /* Sesuaikan ukuran font */
+  }
+
+  .motivation h3 {
+    font-size: 13px;
+  }
+
+  .motivation p {
+    font-size: 12px;
+    -webkit-line-clamp: 3; /* Kurangi jumlah baris teks jika diperlukan */
+  }
+}
+
+@media (max-width: 576px) {
+  .team-container {
+    grid-template-columns: 1fr; /* 1 kolom untuk ponsel */
+  }
+
+  .about-section {
+    padding: 30px 10px; /* Kurangi padding */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Tumpuk elemen secara vertikal */
+    align-items: center; /* Pusatkan elemen */
+  }
+
+  .footer-section {
+    margin: 10px 0; /* Tambahkan jarak antar bagian */
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .footer-logo {
+    margin-right: 0; /* Hilangkan margin logo */
+    margin-bottom: 10px; /* Tambahkan jarak bawah */
+  }
+
+  .footer-bottom {
+    font-size: 12px; /* Sesuaikan ukuran font */
+  }
+}
+
+@media (max-width: 375px) {
+  .team-member h2 {
+    font-size: 14px; /* Ukuran lebih kecil untuk layar sempit */
+  }
+
+  .profile-pic img {
+    width: 70px;
+    height: 70px; /* Ukuran gambar lebih kecil */
+  }
+
+  .motivation p {
+    font-size: 11px;
+    -webkit-line-clamp: 2; /* Kurangi jumlah baris teks */
+  }
+}

@@ -59,9 +59,8 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-  position: absolute;
-  top: 50px;
-  left: -180px;
+  display: flex;
+  align-items: center;
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
@@ -71,6 +70,11 @@ body {
 
 .app-bar .app-bar__navigation.open {
   left: 0;
+}
+
+.app-bar .app-bar__navigation ul {
+  display: flex;
+  align-items: center;
 }
 
 .app-bar .app-bar__navigation ul li a {
@@ -109,6 +113,25 @@ main {
 .hero {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.temp-container {
+  height: 400px;
+}
+
+.upper-body-container {
+  margin-top: 100px;
+}
+
+.hero-img-container {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  background: url("../public/images/heroes/tutorial1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-images {
@@ -303,6 +326,12 @@ a {
   border-radius: 10px;
 }
 
+.image-section-hero img {
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
 .content-section {
   max-width: 450px;
 }
@@ -310,9 +339,22 @@ a {
 .content-section h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .content-section p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.content-section-hero {
+  display: grid;
+  padding: 35px;
+  gap: 26px;
+}
+
+.content-section-hero p {
   margin-bottom: 20px;
   line-height: 1.5;
   color: #555;
