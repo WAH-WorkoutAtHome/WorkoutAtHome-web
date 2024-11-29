@@ -117,7 +117,6 @@ main {
   gap: 0;
 }
 
-
 .hero-images img {
   width: 100%;
   height: auto; 
@@ -294,16 +293,27 @@ a {
 
 .container {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     max-width: 1200px;
     padding: 50px;
     gap: 30px;
+    justify-content: center;
+}
+
+.container-hero {
+  text-align: center;
+    margin-bottom: 30px;
 }
 
 .image-section img {
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
+}
+
+.image-section-hero img {
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
 }
 
 .content-section {
@@ -313,9 +323,22 @@ a {
 .content-section h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .content-section p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.content-section-hero {
+  display: grid;
+      padding: 35px;
+      gap: 26px;
+}
+
+.content-section-hero p {
   margin-bottom: 20px;
   line-height: 1.5;
   color: #555;
@@ -337,21 +360,6 @@ a {
 .card p {
   font-size: 14px;
   color: #777;
-}
-
-.card .button {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 18px;
-  color: #fff;
-  background: #4225EB;
-  padding: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 44px;
-  justify-self: end; /* Pindahkan tombol ke kanan */
 }
 
 .about-section h1 {
