@@ -1,13 +1,13 @@
-const Biodata= {
-    render() {
-      return ` 
-        <style>
+const Biodata = {
+  render() {
+    return ` 
+      <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+          font-family: 'Poppins', sans-serif;
+          background-color: white;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
         }
 
         .profile-container {
@@ -92,52 +92,69 @@ const Biodata= {
         .form-row .form-group:last-child {
           margin-left: 10px;
         }
-</style>
+      </style>
 
-    <div class="profile-container">
+      <div class="profile-container">
         <h2>Biodata</h2>
-        <form action="#" method="POST">
+        <form id="biodata-form">
           <div class="form-group">
             <label for="nama">Nama Pengguna</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama">
+            <input type="text" id="nama" name="nama" placeholder="Masukkan Nama" required>
           </div>
 
-          <!-- Row for Gender and Date of Birth -->
           <div class="form-row">
             <div class="form-group">
               <label for="gender">Jenis Kelamin</label>
-              <select id="gender" name="gender">
+              <select id="gender" name="gender" required>
+                <option value="">Pilih Jenis Kelamin</option>
                 <option value="laki-laki">Laki-laki</option>
                 <option value="perempuan">Perempuan</option>
               </select>
             </div>
             <div class="form-group">
               <label for="dob">Tanggal Lahir</label>
-              <input type="date" id="dob" name="dob">
+              <input type="date" id="dob" name="dob" required>
             </div>
           </div>
 
-          <!-- Row for Height and Weight -->
           <div class="form-row">
             <div class="form-group">
               <label for="height">Tinggi Badan (cm)</label>
-              <input type="number" id="height" name="height" placeholder="Masukkan Tinggi Badan">
+              <input type="number" id="height" name="height" placeholder="Masukkan Tinggi Badan" required>
             </div>
             <div class="form-group">
               <label for="weight">Berat Badan (kg)</label>
-              <input type="number" id="weight" name="weight" placeholder="Masukkan Berat Badan">
+              <input type="number" id="weight" name="weight" placeholder="Masukkan Berat Badan" required>
             </div>
           </div>
 
           <button type="submit" class="submit-button">Selanjutnya</button>
         </form>
       </div>
-        `;
-    },
+    `;
+  },
 
-    async afterRender() {
-    
-      },
-    };
-  
-  export default Biodata;
+  async afterRender() {
+    const form = document.querySelector("#biodata-form");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const biodata = {
+        nama: formData.get("nama").trim(),
+        gender: formData.get("gender"),
+        dob: formData.get("dob"),
+        height: formData.get("height"),
+        weight: formData.get("weight"),
+      };
+
+      // Simpan data ke localStorage
+      localStorage.setItem("biodata", JSON.stringify(biodata));
+      alert("Biodata berhasil disimpan!");
+      window.location.href = "/#/dashboard-user";
+    });
+  },
+};
+
+export default Biodata;
