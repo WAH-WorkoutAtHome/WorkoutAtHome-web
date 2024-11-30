@@ -47,66 +47,65 @@ const KalkulatorGizi = {
           max-width: 400px;
         }
 
-.box h2 {
-  text-align: center;
-  color: #fff;
-  background-color: #4a00e0;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
-  font-size: 1.5rem;
-  margin: -20px -20px 20px -20px;
-}
+        .box h2 {
+          text-align: center;
+          color: #fff;
+          background-color: #4a00e0;
+          padding: 10px;
+          border-radius: 10px 10px 0 0;
+          font-size: 1.5rem;
+          margin: -20px -20px 20px -20px;
+        }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
 
-label {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #333;
-}
+        label {
+          font-weight: bold;
+          font-size: 1rem;
+          color: #333;
+        }
 
-input,
-select {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
+        input,
+        select {
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
 
-input:focus,
-select:focus {
-  outline: none;
-  border-color: #4a00e0;
-  box-shadow: 0 0 5px rgba(74, 0, 224, 0.5);
-}
+        input:focus,
+        select:focus {
+          outline: none;
+          border-color: #4a00e0;
+          box-shadow: 0 0 5px rgba(74, 0, 224, 0.5);
+        }
 
-button.calculate-btn {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #4a00e0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+        button.calculate-btn {
+          padding: 10px;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+          background-color: #4a00e0;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
 
-button.calculate-btn:hover {
-  background-color: #3600b3;
-}
-
+        button.calculate-btn:hover {
+          background-color: #3600b3;
+        }
 
         .result {
           text-align: left;
@@ -149,6 +148,13 @@ button.calculate-btn:hover {
           border-top: 5px solid #4a00e0;
           border-radius: 50%;
           animation: spin 1s linear infinite;
+        }
+
+        .loading p {
+          font-size: 1.5rem;
+          color: #4a00e0;
+          margin-left: 20px;
+          font-weight: bold;
         }
 
         @keyframes spin {
@@ -213,6 +219,7 @@ button.calculate-btn:hover {
       </div>
       <div class="loading" id="loading">
         <div></div>
+        <p>Tunggu sebentar yaa...</p>
       </div>
     `;
   },
@@ -265,14 +272,13 @@ button.calculate-btn:hover {
             const formattedItems = items
               .map((item) => `<li>${item.trim()}</li>`)
               .join("");
-            return `<strong>${title.trim()}</strong><ul>${formattedItems}</ul>`;
+            return `<strong>${title}</strong><ul>${formattedItems}</ul>`;
           })
           .join("");
 
-        recommendationsElement.innerHTML =
-          formattedRecommendations || "Tidak ada rekomendasi.";
+        recommendationsElement.innerHTML = formattedRecommendations;
       } catch (error) {
-        recommendationsElement.innerHTML = `<p style="color: red;">${error.message}</p>`;
+        resultElement.innerHTML = `<p><strong>Error:</strong> ${error.message}</p>`;
       } finally {
         loadingElement.style.display = "none";
       }

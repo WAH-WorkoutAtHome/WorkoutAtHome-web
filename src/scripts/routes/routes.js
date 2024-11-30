@@ -9,12 +9,24 @@ import Chatbot from "../views/pages/chatbot";
 
 const getDefaultRoute = () => {
   const queryString = window.location.search;
-  console.log(queryString);
   const urlParams = new URLSearchParams(queryString);
+
   const token = urlParams.get("token");
+  const profileData = urlParams.get("profile");
+
   if (token) {
     localStorage.setItem("userToken", token);
   }
+
+  if (profileData) {
+    try {
+      const profile = JSON.parse(decodeURIComponent(profileData));
+      localStorage.setItem("userProfile", JSON.stringify(profile));
+    } catch (error) {
+      console.error("Failed to parse profile data", error);
+    }
+  }
+
   const userToken = localStorage.getItem("userToken");
   return userToken ? DashboardUser : DashboardGuest;
 };
