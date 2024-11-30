@@ -18,6 +18,8 @@ const NavbarUser = {
             <a href="/#/profile" class="profile-button">
               <img src="./images/icon/profile.png" alt="Profile"/>
             </a>
+          </li>
+          <li>
             <button id="logoutButton" class="logout-button">Logout</button>
           </li>
         </ul>
@@ -31,26 +33,27 @@ const NavbarUser = {
     const logoutButton = document.querySelector("#logoutButton");
 
     // Toggle navigation drawer
-    hamburgerButton.addEventListener("click", () => {
-      navigationDrawer.classList.toggle("open");
+    hamburgerButton?.addEventListener("click", () => {
+      navigationDrawer?.classList.toggle("open");
     });
 
-    // Close navigation drawer when clicking outside
     window.addEventListener("click", (event) => {
       if (
-        !navigationDrawer.contains(event.target) &&
-        !hamburgerButton.contains(event.target)
+        !navigationDrawer?.contains(event.target) &&
+        !hamburgerButton?.contains(event.target)
       ) {
-        navigationDrawer.classList.remove("open");
+        navigationDrawer?.classList.remove("open");
       }
     });
 
-    // Handle logout
-    logoutButton.addEventListener("click", () => {
-      localStorage.removeItem("userToken"); // Hapus token dari localStorage
-      alert("Anda telah berhasil logout."); // Tampilkan notifikasi
-      window.location.href = "/"; // Arahkan ke halaman awal
-    });
+    if (logoutButton) {
+      logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("userToken");
+        alert("Anda telah berhasil logout.");
+        window.location.href = "/";
+      });
+    } else {
+    }
   },
 };
 
