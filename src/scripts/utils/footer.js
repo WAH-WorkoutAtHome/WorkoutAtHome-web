@@ -16,8 +16,8 @@ const Footer = {
                 <h3>IKUTI KAMI</h3>
                 <div class="social-icons">
                     <a href="#"><img src="./images/icon/instagram.png" alt="Instagram"></a>
-                    <a href="#"><img src="./images/icon/linkedin.png" alt="LinkedIn"></a>
-                    <a href="#"><img src="./images/icon/github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/meylia-wijayanti-8a9811336/"><img src="./images/icon/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/WAH-WorkoutAtHome/WorkoutAtHome-web"><img src="./images/icon/github.png" alt="GitHub"></a>
                 </div>
             </div>
         </div>
