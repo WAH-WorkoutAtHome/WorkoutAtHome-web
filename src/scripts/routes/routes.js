@@ -5,6 +5,7 @@ import Tutorial from "../views/pages/tutorial";
 import KalkulatorGizi from "../views/pages/kalkulator-gizi";
 import Profile from "../views/pages/profile";
 import Biodata from "../views/pages/biodata";
+import Chatbot from "../views/pages/chatbot";
 
 const getDefaultRoute = () => {
   const queryString = window.location.search;
@@ -27,6 +28,7 @@ const routes = {
   "/tutorial": Tutorial,
   "/kalkulator-gizi": KalkulatorGizi,
   "/profile": Profile,
+  "/chatbot": Chatbot
 };
 
 export default routes;

@@ -254,18 +254,6 @@ a {
   background-color: #3ecce9e2;
 }
 
-.chat-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.chat-widget img {
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-}
-
 .features {
   background: linear-gradient(180deg, #4225eb, #251585);
   text-align: center;

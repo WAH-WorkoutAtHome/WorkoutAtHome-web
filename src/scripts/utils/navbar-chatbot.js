@@ -1,8 +1,7 @@
-const NavbarUser = {
-  render() {
-    return `
-      <!-- Header -->
-      <div class="app-bar__menu">
+const NavbarChatbot = {
+    render() {
+      return `
+        <div class="app-bar__menu">
         <button id="hamburgerButton" aria-label="Open navigation menu">☰</button>
       </div>
       <div class="app-bar__brand">
@@ -17,33 +16,18 @@ const NavbarUser = {
           <li><a href="/#/chatbot">CHAT AI</a></li>
           <li>
             <a href="/#/profile" class="profile-button">
-              <img src="./images/icon/profile.png" alt="Profile"/>
+              <img class="lazyload" data-src="./images/icon/profile.png" alt="Profile"/>
             </a>
           </li>
         </ul>
       </nav>
-    `;
-  },
+      `;
+    },
 
   async afterRender() {
-    const hamburgerButton = document.querySelector("#hamburgerButton");
-    const navigationDrawer = document.querySelector("#navigationDrawer");
-
-    // Toggle navigation drawer
-    hamburgerButton?.addEventListener("click", () => {
-      navigationDrawer?.classList.toggle("open");
-    });
-
-    window.addEventListener("click", (event) => {
-      if (
-        !navigationDrawer?.contains(event.target) &&
-        !hamburgerButton?.contains(event.target)
-      ) {
-        navigationDrawer?.classList.remove("open");
-      }
-    });
     
   },
 };
-
-export default NavbarUser;
+  
+  export default NavbarChatbot;
+  
