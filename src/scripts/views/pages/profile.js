@@ -3,7 +3,7 @@ const Profile = {
     return ` 
 const Profile = {
   render() {
-    return ` 
+    return  
      <style>
       body {
         font-family: 'Poppins', sans-serif;
@@ -159,26 +159,26 @@ const Profile = {
 
   async afterRender() {
     // Ambil elemen-elemen penting
-    const savedData = JSON.parse(localStorage.getItem('userBiodata')) || {};
-    const profileForm = document.querySelector('#profile-form');
-    const updateButton = document.querySelector('.update-button');
-    const logoutButton = document.getElementById('logout-button');
+    const savedData = JSON.parse(localStorage.getItem("userBiodata")) || {};
+    const profileForm = document.querySelector("#profile-form");
+    const updateButton = document.querySelector(".update-button");
+    const logoutButton = document.getElementById("logout-button");
 
     // Isi formulir dengan data yang tersimpan
     function populateForm(data) {
-        document.getElementById('nama').value = data.nama || '';
-        document.getElementById('gender').value = data.gender || '';
-        document.getElementById('dob').value = data.dob || '';
-        document.getElementById('height').value = data.height || '';
-        document.getElementById('weight').value = data.weight || '';
+      document.getElementById("nama").value = data.nama || "";
+      document.getElementById("gender").value = data.gender || "";
+      document.getElementById("dob").value = data.dob || "";
+      document.getElementById("height").value = data.height || "";
+      document.getElementById("weight").value = data.weight || "";
     }
 
     // Nonaktifkan input form secara default
     function toggleFormEditable(isEditable) {
-        const inputs = profileForm.querySelectorAll('input, select');
-        inputs.forEach(input => {
-            input.disabled = !isEditable;
-        });
+      const inputs = profileForm.querySelectorAll("input, select");
+      inputs.forEach((input) => {
+        input.disabled = !isEditable;
+      });
     }
 
     // Set data ke form saat pertama kali di-load
@@ -186,46 +186,52 @@ const Profile = {
     toggleFormEditable(false);
 
     // Event listener untuk tombol "Ubah Profile"
-    updateButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        const isEditing = updateButton.textContent === 'Simpan Perubahan';
-        
-        if (isEditing) {
-            // Simpan data baru
-            const formData = new FormData(profileForm);
-            const updatedBiodata = {
-                nama: formData.get('nama').trim(),
-                gender: formData.get('gender'),
-                dob: formData.get('dob'),
-                height: formData.get('height'),
-                weight: formData.get('weight'),
-            };
+    updateButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      const isEditing = updateButton.textContent === "Simpan Perubahan";
 
-            // Validasi input
-            if (!updatedBiodata.nama || !updatedBiodata.gender || !updatedBiodata.dob || !updatedBiodata.height || !updatedBiodata.weight) {
-                alert('Semua kolom wajib diisi!');
-                return;
-            }
+      if (isEditing) {
+        // Simpan data baru
+        const formData = new FormData(profileForm);
+        const updatedBiodata = {
+          nama: formData.get("nama").trim(),
+          gender: formData.get("gender"),
+          dob: formData.get("dob"),
+          height: formData.get("height"),
+          weight: formData.get("weight"),
+        };
 
-            // Simpan ke localStorage
-            localStorage.setItem('userBiodata', JSON.stringify(updatedBiodata));
-            alert('Profil berhasil diperbarui!');
-            updateButton.textContent = 'Ubah Profile';
-            toggleFormEditable(false);
-        } else {
-            // Aktifkan mode edit
-            toggleFormEditable(true);
-            updateButton.textContent = 'Simpan Perubahan';
+        // Validasi input
+        if (
+          !updatedBiodata.nama ||
+          !updatedBiodata.gender ||
+          !updatedBiodata.dob ||
+          !updatedBiodata.height ||
+          !updatedBiodata.weight
+        ) {
+          alert("Semua kolom wajib diisi!");
+          return;
         }
+
+        // Simpan ke localStorage
+        localStorage.setItem("userBiodata", JSON.stringify(updatedBiodata));
+        alert("Profil berhasil diperbarui!");
+        updateButton.textContent = "Ubah Profile";
+        toggleFormEditable(false);
+      } else {
+        // Aktifkan mode edit
+        toggleFormEditable(true);
+        updateButton.textContent = "Simpan Perubahan";
+      }
     });
 
     // Event listener untuk tombol logout
-    logoutButton.addEventListener('click', () => {
-        localStorage.removeItem('userToken');
-        localStorage.removeItem('userBiodata');
-        window.location.href = '/#/dashboard-guest';
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("userToken");
+      localStorage.removeItem("userBiodata");
+      window.location.href = "/#/dashboard-guest";
     });
-},
-}
+  },
+};
 
 export default Profile;

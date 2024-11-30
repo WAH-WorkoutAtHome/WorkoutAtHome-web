@@ -28,6 +28,7 @@ const NavbarUser = {
   async afterRender() {
     const hamburgerButton = document.querySelector("#hamburgerButton");
     const navigationDrawer = document.querySelector("#navigationDrawer");
+    const logoutButton = document.querySelector("#logoutButton"); // Define logoutButton
 
     // Toggle navigation drawer
     hamburgerButton?.addEventListener("click", () => {
@@ -44,11 +45,14 @@ const NavbarUser = {
     });
 
     // Handle logout
-    logoutButton.addEventListener("click", () => {
-      localStorage.removeItem("userToken"); // Hapus token dari localStorage
-      alert("Anda telah berhasil logout."); // Tampilkan notifikasi
-      window.location.href = "/"; // Arahkan ke halaman awal
-    });
+    if (logoutButton) {
+      // Check if logoutButton exists
+      logoutButton.addEventListener("click", () => {
+        localStorage.removeItem("userToken"); // Hapus token dari localStorage
+        alert("Anda telah berhasil logout."); // Tampilkan notifikasi
+        window.location.href = "/"; // Arahkan ke halaman awal
+      });
+    }
   },
 };
 
