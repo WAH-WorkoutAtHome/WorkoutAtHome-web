@@ -26,6 +26,14 @@
       text-align: center;
       margin: 0;
     }
+
+    .hero-user {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero-calendar {
+      grid-template-columns: repeat(1, 1fr);
+  }
   }
    
   @media (max-width: 480px) {
@@ -39,12 +47,27 @@
       grid-template-columns: repeat(2, 1fr);
     }
   
+    .hero-user {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero-calendar {
+      grid-template-columns: repeat(1, 1fr);
+  }
   }
   
   @media screen and (min-width: 800px) {
     .app-bar .app-bar__brand h1 {
       font-size: 2em;
     }
+
+    .hero-user {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-calendar {
+      grid-template-columns: repeat(1, 1fr);
+  }
 }
 
   @media screen and (min-width: 850px) {
@@ -60,6 +83,20 @@
     .container {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .hero-user {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-calendar {
+      grid-template-columns: repeat(1, 1fr);
+  }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .hero-calendar {
+      grid-template-columns: repeat(2, 1fr);
+  }
   }
 
   @media screen and (min-width: 1200px) {
@@ -76,6 +113,14 @@
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
       }
+
+      .hero-user {
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
     }
 
     @media screen and (min-width: 1600px) {
@@ -93,6 +138,14 @@
           grid-template-columns: repeat(2, 1fr);
           margin: 0 auto;
         }
+
+        .hero-user {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero-calendar {
+          grid-template-columns: repeat(2, 1fr);
+      }
       }
 
       /* Responsive Video Grid */

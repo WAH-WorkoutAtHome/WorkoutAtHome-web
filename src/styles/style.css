@@ -3,6 +3,8 @@
   margin: 0;
 }
 
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
@@ -134,13 +136,51 @@ main {
   background-size: cover;
 }
 
-.hero-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+.hero-images-guest {
+  
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.hero-images img {
+.hero-images {
+  
+  height: 400px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero-text{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  
+  height: 400px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.hero-text{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.hero-images-guest img {
   width: 100%;
   height: auto;
   max-height: 350px;
@@ -167,7 +207,7 @@ main {
 
 .hero-user {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .hero-images-user img {
@@ -180,12 +220,12 @@ main {
 .hero-content-user {
   justify-items: center;
   align-content: center;
+  
 }
 
 .hero-calendar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .hero-quote-calendar {
@@ -358,6 +398,10 @@ a {
   margin-bottom: 20px;
   line-height: 1.5;
   color: #555;
+
+  max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
@@ -524,20 +568,6 @@ a {
   height: 24px;
 }
 
-.logout-button {
-  background-color: #ff4d4d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.logout-button:hover {
-  background-color: #e60000;
-}
-
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #fff;
@@ -545,3 +575,39 @@ a {
   margin-top: 20px;
   font-size: 14px;
 }
+
+.search-container {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-container input {
+  width: 70%; /* Perkecil untuk memberikan ruang pada tombol */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Ujung kiri dibulatkan */
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #5a5959; /* Warna hijau untuk tombol */
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0; /* Ujung kanan dibulatkan */
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #232222; /* Warna hijau lebih gelap saat hover */
+}
+
+.search-container button:active {
+  background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
+}
+
+
+

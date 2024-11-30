@@ -1,27 +1,34 @@
 const Tutorial = {
   async render() {
-    // return '';
     return `
-
       <!-- Hero Section -->
-              <section class="hero">
-              
-              <div class="hero-img-container">
-                <div class="hero-images">
-                  <div></div>
-                  <div class="hero-text">
-                    <h1>Mulai Latihan dengan<br/>Tutorial Kami!</h1>
-                    <p>
-                      Mulai perjalanan kebugaran Anda di sini dan capai<br/>tujuan sehat dengan
-                      latihan yang bisa dilakukan di<br/>rumah.
-                    </p>
-                  </div>
-              </div>
+      <section class="hero">
+        <div class="hero-img-container">
+          <div class="hero-images">
+          
+            <div class="hero-text">
+              <h1>Mulai Latihan dengan<br/>Tutorial Kami!</h1>
+              <p>
+                Mulai perjalanan kebugaran Anda di sini dan capai<br/>tujuan sehat dengan
+                latihan yang bisa dilakukan di<br/>rumah.
+              </p>
+            </div>
           </div>
         </div>
-      </header>
-      <!-- video tutorial -->
-      <section class="upper-body-container">
+      </section>
+      
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Cari kategori latihan" 
+        />
+        <button id="search-button">Cari</button>
+      </div>
+      
+      <!-- Video Tutorial Sections -->
+      <section class="upper-body-container" data-category="upper body">
         <h2>Upper Body</h2>
         <div class="video-grid">
             <iframe src="https://www.youtube.com/embed/mm47bCaCzpQ?si=DOcjG2v2XSpULIl0" allowfullscreen></iframe>
@@ -33,7 +40,8 @@ const Tutorial = {
             <iframe src="https://www.youtube.com/embed/w1sFVRcpE2g?si=zGPmr7kZutt3DagY" allowfullscreen></iframe>
         </div>
       </section>
-      <section>
+
+      <section class="lower-body-container" data-category="lower body">
         <h2>Lower Body</h2>
         <div class="video-grid">
             <iframe src="https://www.youtube.com/embed/X0xt0fYTZv8?si=lrR5wRVfSmewj9vz" allowfullscreen></iframe>
@@ -43,7 +51,8 @@ const Tutorial = {
             <iframe src="https://www.youtube.com/embed/r4aMIs0ouPU?si=4ZD3RSpPNgQZleR9" allowfullscreen></iframe>
         </div>
       </section>
-      <section>
+
+      <section class="cardio-container" data-category="cardio">
         <h2>Cardio</h2>
         <div class="video-grid">
             <iframe src="https://www.youtube.com/embed/a-V4Or5xyis?si=vdhcF3iAmJ65WfEf" allowfullscreen></iframe>
@@ -53,7 +62,8 @@ const Tutorial = {
             <iframe src="https://www.youtube.com/embed/W5IiasNutB8?si=aiuadA5MZTT8WxS3" allowfullscreen></iframe>
         </div>
       </section>
-      <section>
+
+      <section class="core-container" data-category="core">
         <h2>Core</h2>
         <div class="video-grid">
             <iframe src="https://www.youtube.com/embed/8PwoytUU06g?si=2e2ao5k0le3xdPQM" allowfullscreen></iframe>
@@ -67,7 +77,26 @@ const Tutorial = {
   },
 
   async afterRender() {
-    // console.log("Tutorial page rendered successfully.");
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const sections = document.querySelectorAll('section[data-category]');
+
+    const filterSections = () => {
+      const query = searchInput.value.toLowerCase();
+
+      sections.forEach((section) => {
+        const category = section.getAttribute('data-category').toLowerCase();
+        if (category.includes(query)) {
+          section.style.display = ''; 
+        } else {
+          section.style.display = 'none'; 
+        }
+      });
+    };
+
+    searchInput.addEventListener('input', filterSections);
+
+    searchButton.addEventListener('click', filterSections);
   },
 };
 

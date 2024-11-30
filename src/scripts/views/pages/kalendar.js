@@ -9,7 +9,7 @@ const Kalendar = {
           <button class="join-button" id="auth-calendar-button">Sinkronkan Jadwal</button>
         </div>
         <div class="hero-images-calendar">
-          <img src="./images/heroes/kalendar1.png" alt="Workout 3">
+        <img src="./images/heroes/kalendar1.png" alt="Workout 3">
           <img class="images-kalendar2" src="./images/heroes/kalendar2.png" alt="Workout 4">
         </div>
       </section>
