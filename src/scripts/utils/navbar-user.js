@@ -16,9 +16,8 @@ const NavbarUser = {
           <li><a href="/#/kalkulator-gizi">KALKULATOR GIZI</a></li>
           <li>
             <a href="/#/profile" class="profile-button">
-              <img src="./images/icon/profile.png" alt="Profile"/>
+              <img class="lazyload" data-src="./images/icon/profile.png" alt="Profile"/>
             </a>
-            <button id="logoutButton" class="logout-button">Logout</button>
           </li>
         </ul>
       </nav>
@@ -28,7 +27,6 @@ const NavbarUser = {
   async afterRender() {
     const hamburgerButton = document.querySelector("#hamburgerButton");
     const navigationDrawer = document.querySelector("#navigationDrawer");
-    const logoutButton = document.querySelector("#logoutButton"); // Define logoutButton
 
     // Toggle navigation drawer
     hamburgerButton?.addEventListener("click", () => {
@@ -43,16 +41,7 @@ const NavbarUser = {
         navigationDrawer?.classList.remove("open");
       }
     });
-
-    // Handle logout
-    if (logoutButton) {
-      // Check if logoutButton exists
-      logoutButton.addEventListener("click", () => {
-        localStorage.removeItem("userToken"); // Hapus token dari localStorage
-        alert("Anda telah berhasil logout."); // Tampilkan notifikasi
-        window.location.href = "/"; // Arahkan ke halaman awal
-      });
-    }
+    
   },
 };
 

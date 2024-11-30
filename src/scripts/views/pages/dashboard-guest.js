@@ -5,8 +5,8 @@ const DashboardGuest = {
         <!-- Hero Section -->
         <section class="hero" id="hero">
           <div class="hero-images-guest">
-            <img src="./images/heroes/dashboard1.png" alt="Workout 1">
-            <img src="./images/heroes/dashboard2.png" alt="Workout 2">
+            <img class="lazyload" data-src="./images/heroes/dashboard1.png" alt="Workout 1">
+            <img class="lazyload" data-src="./images/heroes/dashboard2.png" alt="Workout 2">
           </div>
           <p class="hero-quote">"Raih kebugaran dari rumah. Langkah kecil hari ini, kesehatan lebih baik esok hari."</p>
           <button class="join-button"><a class="loginButton" href="#login">Gabung Sekarang</a></button>
@@ -21,7 +21,7 @@ const DashboardGuest = {
           <div class="features-grid">
             <div class="feature-card">
               <div class="feature-icon">
-                <img src="./images/icon/kalender.png" alt="Schedule Icon">
+                <img class="lazyload" data-src="./images/icon/kalender.png" alt="Schedule Icon">
               </div>
               <h2 class="feature-title">Penjadwalan Olahraga</h2>
               <p class="feature-description">
@@ -30,7 +30,7 @@ const DashboardGuest = {
             </div>
             <div class="feature-card">
               <div class="feature-icon">
-                <img src="./images/icon/video.png" alt="Video Icon">
+                <img class="lazyload" data-src="./images/icon/video.png" alt="Video Icon">
               </div>
               <h2 class="feature-title">Video Tutorial Olahraga</h2>
               <p class="feature-description">
@@ -39,7 +39,7 @@ const DashboardGuest = {
             </div>
             <div class="feature-card">
               <div class="feature-icon">
-                <img src="./images/icon/kalkulator.png" alt="Calculator Icon">
+                <img class="lazyload" data-src="./images/icon/kalkulator.png" alt="Calculator Icon">
               </div>
               <h2 class="feature-title">Kalkulator Gizi</h2>
               <p class="feature-description">
@@ -62,7 +62,7 @@ const DashboardGuest = {
         <section>
             <div class="container">
                 <div class="image-section">
-                    <img src="./images/heroes/artikel.png" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel.png" alt="Exercise Image">
                 </div>
                 <div class="content-section">
                     <h1>Cara Efektif Memulai Workout di Rumah</h1>
@@ -81,12 +81,12 @@ const DashboardGuest = {
                     <p>Keuntungan lain dari workout di rumah adalah fleksibilitas waktu. Anda dapat berlatih kapan saja, baik di pagi hari untuk memulai hari dengan energi positif atau di malam hari untuk melepas penat setelah bekerja. Tidak perlu khawatir tentang biaya gym atau perjalanan ke tempat fitness, menjadikan workout di rumah pilihan yang praktis dan efisien.</p>
                 </div>
                 <div class="image-section">
-                    <img src="./images/heroes/artikel2.jpg" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel2.jpg" alt="Exercise Image">
                 </div>
             </div>
             <div class="container-hero">
                 <div class="image-section-hero">
-                    <img src="./images/heroes/artikel3.jpg" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel3.jpg" alt="Exercise Image">
                 </div>
                  <div class="content-section-hero">
                     <h1>Workout Sederhana yang Bisa Dilakukan di Rumah</h1>
@@ -105,7 +105,7 @@ const DashboardGuest = {
           <div class="team-container">
             <div class="team-member">
               <div class="profile-pic">
-              <img src="./images/about/irwin.jpg" alt="Back End 1">
+              <img class="lazyload" data-src="./images/about/irwin.jpg" alt="Back End 1">
               </div>
               <h2>A. Irwin Putra Pangesti</h2>
               <p class="role">Back End</p>
@@ -116,7 +116,7 @@ const DashboardGuest = {
             </div>
             <div class="team-member">
               <div class="profile-pic">
-              <img src="./images/about/luniko.jpg" alt="Back End 2">
+              <img class="lazyload" data-src="./images/about/luniko.jpg" alt="Back End 2">
               </div>
               <h2>Luniko Jama</h2>
               <p class="role">Back End</p>
@@ -127,7 +127,7 @@ const DashboardGuest = {
             </div>
             <div class="team-member">
               <div class="profile-pic">
-                <img src="./images/about/cana.jpg" alt="Front End 2">
+                <img class="lazyload" data-src="./images/about/cana.jpg" alt="Front End 2">
               </div>
               <h2>Ahsana Azmiara A.</h2>
               <p class="role">Front End</p>
@@ -138,7 +138,7 @@ const DashboardGuest = {
             </div>
             <div class="team-member">
               <div class="profile-pic">
-                <img src="./images/about/mey.jpg" alt="Front End 1">
+                <img class="lazyload" data-src="./images/about/mey.jpg" alt="Front End 1">
               </div>
               <h2>Meylia Wijayanti</h2>
               <p class="role">Front End</p>
@@ -171,7 +171,7 @@ const DashboardGuest = {
       // Cek login
       const userToken = localStorage.getItem('userToken');
       if (userToken) {
-        window.location.href = '/#/dashboard-user';
+        window.location.href = '/#/biodata';
       }
     },
 };

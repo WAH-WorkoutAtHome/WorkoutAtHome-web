@@ -119,12 +119,7 @@ main {
   height: 400px;
 }
 
-.upper-body-container {
-  margin-top: 100px;
-}
-
 .hero-img-container {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -209,11 +204,14 @@ main {
 .hero-content-user {
   justify-items: center;
   align-content: center;
+  padding: 25px;
 }
 
 .hero-calendar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
 }
 
 .hero-quote-calendar {
@@ -224,7 +222,12 @@ main {
 .hero-content-calendar {
   align-content: center;
   padding: 35px;
-  border-radius: 15px;
+}
+
+.hero-images-user img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Menjaga proporsi gambar tetap sesuai */
 }
 
 .profile-button img {

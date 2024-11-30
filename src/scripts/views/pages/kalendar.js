@@ -8,9 +8,8 @@ const Kalendar = {
           <p class="hero-quote-calendar">Apakah Anda ingin mencapai tujuan kebugaran tanpa harus pergi ke gym? Dengan fitur penjadwalan olahraga di rumah, Anda dapat merencanakan latihan yang sesuai dengan tujuan dan gaya hidup Anda — langsung dari kenyamanan rumah! Kami akan membantu Anda membuat jadwal latihan yang efektif dan aman, dengan latihan yang bisa dilakukan tanpa peralatan mahal. Cukup klik tombol di bawah ini untuk menyinkronkan jadwal olahraga Anda.</p>
           <button class="join-button" id="auth-calendar-button">Sinkronkan Jadwal</button>
         </div>
-        <div class="hero-images-calendar">
-        <img src="./images/heroes/kalendar1.png" alt="Workout 3">
-          <img class="images-kalendar2" src="./images/heroes/kalendar2.png" alt="Workout 4">
+        <div class="hero-images-user">
+          <img class="lazyload" data-src="./images/heroes/kalendar.jpg" alt="Workout 2">
         </div>
       </section>
     `;
