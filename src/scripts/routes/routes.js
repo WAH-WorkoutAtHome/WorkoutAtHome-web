@@ -28,7 +28,7 @@ const routes = {
   "/tutorial": Tutorial,
   "/kalkulator-gizi": KalkulatorGizi,
   "/profile": Profile,
-  "/chatbot": Chatbot
+  "/chatbot": Chatbot,
 };
 
 export default routes;

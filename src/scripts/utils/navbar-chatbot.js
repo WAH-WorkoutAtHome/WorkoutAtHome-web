@@ -1,6 +1,6 @@
 const NavbarChatbot = {
-    render() {
-      return `
+  render() {
+    return `
         <div class="app-bar__menu">
         <button id="hamburgerButton" aria-label="Open navigation menu">☰</button>
       </div>
@@ -13,7 +13,7 @@ const NavbarChatbot = {
           <li><a href="/#/kalendar">KALENDAR</a></li>
           <li><a href="/#/tutorial">TUTORIAL</a></li>
           <li><a href="/#/kalkulator-gizi">KALKULATOR GIZI</a></li>
-          <li><a href="/#/chatbot">CHAT AI</a></li>
+          <li><a href="/#/chatbot">WAH BOT</a></li>
           <li>
             <a href="/#/profile" class="profile-button">
               <img class="lazyload" data-src="./images/icon/profile.png" alt="Profile"/>
@@ -22,12 +22,9 @@ const NavbarChatbot = {
         </ul>
       </nav>
       `;
-    },
-
-  async afterRender() {
-    
   },
+
+  async afterRender() {},
 };
-  
-  export default NavbarChatbot;
-  
+
+export default NavbarChatbot;

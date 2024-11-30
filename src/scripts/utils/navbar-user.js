@@ -14,7 +14,7 @@ const NavbarUser = {
           <li><a href="/#/kalendar">KALENDAR</a></li>
           <li><a href="/#/tutorial">TUTORIAL</a></li>
           <li><a href="/#/kalkulator-gizi">KALKULATOR GIZI</a></li>
-          <li><a href="/#/chatbot">CHAT AI</a></li>
+          <li><a href="/#/chatbot">WAH BOT</a></li>
           <li>
             <a href="/#/profile" class="profile-button">
               <img src="./images/icon/profile.png" alt="Profile"/>
@@ -42,7 +42,6 @@ const NavbarUser = {
         navigationDrawer?.classList.remove("open");
       }
     });
-    
   },
 };
 
