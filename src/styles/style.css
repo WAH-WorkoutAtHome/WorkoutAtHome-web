@@ -358,6 +358,12 @@ a {
   max-width: 1200px;
   padding: 50px;
   gap: 30px;
+  justify-items: center;
+}
+
+.container-hero {
+  JUSTIFY-ITEMS: CENTER;
+  text-align: center;
 }
 
 .image-section img {
@@ -391,7 +397,7 @@ a {
 .content-section-hero {
   display: grid;
   padding: 35px;
-  gap: 26px;
+  gap: 20px;
 }
 
 .content-section-hero p {
