@@ -3,8 +3,6 @@
   margin: 0;
 }
 
-
-
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
@@ -137,47 +135,38 @@ main {
 }
 
 .hero-images-guest {
-  
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .hero-images {
-  
   height: 400px;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.hero-text{
+.hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  
   height: 400px;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.hero-text{
+.hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
-
 }
 
 .hero-images-guest img {
@@ -207,7 +196,7 @@ main {
 
 .hero-user {
   display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .hero-images-user img {
@@ -220,12 +209,11 @@ main {
 .hero-content-user {
   justify-items: center;
   align-content: center;
-  
 }
 
 .hero-calendar {
   display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .hero-quote-calendar {
@@ -406,8 +394,8 @@ a {
   color: #555;
 
   max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
@@ -614,6 +602,3 @@ a {
 .search-container button:active {
   background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
 }
-
-
-
