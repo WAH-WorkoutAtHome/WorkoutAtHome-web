@@ -156,10 +156,10 @@ const Profile = {
 
   async afterRender() {
     // Ambil elemen-elemen penting
-    const savedData = JSON.parse(localStorage.getItem('userBiodata')) || {};
-    const profileForm = document.querySelector('#profile-form');
-    const updateButton = document.querySelector('.update-button');
-    const logoutButton = document.getElementById('logout-button');
+    const savedData = JSON.parse(localStorage.getItem("userBiodata")) || {};
+    const profileForm = document.querySelector("#profile-form");
+    const updateButton = document.querySelector(".update-button");
+    const logoutButton = document.getElementById("logout-button");
 
     // Isi formulir dengan data yang tersimpan
     function populateForm(data) {

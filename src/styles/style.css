@@ -3,8 +3,6 @@
   margin: 0;
 }
 
-
-
 body {
   font-family: "Poppins", sans-serif;
   background-color: white;
@@ -121,12 +119,7 @@ main {
   height: 400px;
 }
 
-.upper-body-container {
-  margin-top: 100px;
-}
-
 .hero-img-container {
-  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -137,47 +130,38 @@ main {
 }
 
 .hero-images-guest {
-  
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .hero-images {
-  
   height: 400px;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.hero-text{
+.hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  
   height: 400px;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.hero-text{
+.hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
   gap: 24px;
-
 }
 
 .hero-images-guest img {
@@ -207,7 +191,7 @@ main {
 
 .hero-user {
   display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .hero-images-user img {
@@ -220,12 +204,14 @@ main {
 .hero-content-user {
   justify-items: center;
   align-content: center;
-  
+  padding: 25px;
 }
 
 .hero-calendar {
   display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
 }
 
 .hero-quote-calendar {
@@ -236,7 +222,12 @@ main {
 .hero-content-calendar {
   align-content: center;
   padding: 35px;
-  border-radius: 15px;
+}
+
+.hero-images-user img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Menjaga proporsi gambar tetap sesuai */
 }
 
 .profile-button img {
@@ -358,6 +349,12 @@ a {
   max-width: 1200px;
   padding: 50px;
   gap: 30px;
+  justify-items: center;
+}
+
+.container-hero {
+  JUSTIFY-ITEMS: CENTER;
+  text-align: center;
 }
 
 .image-section img {
@@ -391,7 +388,7 @@ a {
 .content-section-hero {
   display: grid;
   padding: 35px;
-  gap: 26px;
+  gap: 20px;
 }
 
 .content-section-hero p {
@@ -400,8 +397,8 @@ a {
   color: #555;
 
   max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
@@ -608,6 +605,3 @@ a {
 .search-container button:active {
   background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
 }
-
-
-

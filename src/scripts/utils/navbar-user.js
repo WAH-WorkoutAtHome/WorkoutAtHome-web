@@ -16,7 +16,7 @@ const NavbarUser = {
           <li><a href="/#/kalkulator-gizi">KALKULATOR GIZI</a></li>
           <li>
             <a href="/#/profile" class="profile-button">
-              <img src="./images/icon/profile.png" alt="Profile"/>
+              <img class="lazyload" data-src="./images/icon/profile.png" alt="Profile"/>
             </a>
           </li>
         </ul>
@@ -29,20 +29,19 @@ const NavbarUser = {
     const navigationDrawer = document.querySelector("#navigationDrawer");
 
     // Toggle navigation drawer
-    hamburgerButton.addEventListener("click", () => {
-      navigationDrawer.classList.toggle("open");
+    hamburgerButton?.addEventListener("click", () => {
+      navigationDrawer?.classList.toggle("open");
     });
 
-    // Close navigation drawer when clicking outside
     window.addEventListener("click", (event) => {
       if (
-        !navigationDrawer.contains(event.target) &&
-        !hamburgerButton.contains(event.target)
+        !navigationDrawer?.contains(event.target) &&
+        !hamburgerButton?.contains(event.target)
       ) {
-        navigationDrawer.classList.remove("open");
+        navigationDrawer?.classList.remove("open");
       }
     });
-
+    
   },
 };
 

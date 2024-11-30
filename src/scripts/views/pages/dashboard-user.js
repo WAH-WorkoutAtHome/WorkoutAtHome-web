@@ -9,7 +9,7 @@ const DashboardUser = {
           <button class="join-button"><a href="/#/tutorial">Mulai Sekarang</a></button>
         </div>
         <div class="hero-images-user">
-          <img src="./images/heroes/dashboard2.png" alt="Workout 2">
+          <img class="lazyload" data-src="./images/heroes/dashboard2.png" alt="Workout 2">
         </div>
           </section>
   
@@ -63,7 +63,7 @@ const DashboardUser = {
         <section>
             <div class="container">
                 <div class="image-section">
-                    <img src="./images/heroes/artikel.png" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel.png" alt="Exercise Image">
                 </div>
                 <div class="content-section">
                     <h1>Cara Efektif Memulai Workout di Rumah</h1>
@@ -82,12 +82,12 @@ const DashboardUser = {
                     <p>Keuntungan lain dari workout di rumah adalah fleksibilitas waktu. Anda dapat berlatih kapan saja, baik di pagi hari untuk memulai hari dengan energi positif atau di malam hari untuk melepas penat setelah bekerja. Tidak perlu khawatir tentang biaya gym atau perjalanan ke tempat fitness, menjadikan workout di rumah pilihan yang praktis dan efisien.</p>
                 </div>
                 <div class="image-section">
-                    <img src="./images/heroes/artikel2.jpg" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel2.jpg" alt="Exercise Image">
                 </div>
             </div>
             <div class="container-hero">
                 <div class="image-section-hero">
-                    <img src="./images/heroes/artikel3.jpg" alt="Exercise Image">
+                    <img class="lazyload" data-src="./images/heroes/artikel3.jpg" alt="Exercise Image">
                 </div>
                  <div class="content-section-hero">
                     <h1>Workout Sederhana yang Bisa Dilakukan di Rumah</h1>

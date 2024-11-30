@@ -42,7 +42,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .team-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -53,6 +53,10 @@
 
     .hero-calendar {
       grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container{
+    grid-template-columns: repeat(1, 1fr);
   }
   }
   
@@ -67,6 +71,11 @@
 
     .hero-calendar {
       grid-template-columns: repeat(1, 1fr);
+  }
+   
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
   }
 }
 
@@ -91,11 +100,21 @@
     .hero-calendar {
       grid-template-columns: repeat(1, 1fr);
   }
+
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+  }
   }
 
   @media screen and (min-width: 1000px) {
     .hero-calendar {
       grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
   }
   }
 
@@ -120,6 +139,11 @@
 
       .hero-calendar {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px; 
     }
     }
 
@@ -146,13 +170,18 @@
         .hero-calendar {
           grid-template-columns: repeat(2, 1fr);
       }
+
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px; 
+      }
       }
 
       /* Responsive Video Grid */
 @media (max-width: 768px) {
   .video-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller columns for mobile */
-    gap: 12px; /* Reduce gap for smaller screens */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; 
   }
 
   .video-item {
@@ -248,22 +277,22 @@
   }
 
   .footer-bottom {
-    font-size: 12px; /* Sesuaikan ukuran font */
+    font-size: 12px; 
   }
 }
 
 @media (max-width: 375px) {
   .team-member h2 {
-    font-size: 14px; /* Ukuran lebih kecil untuk layar sempit */
+    font-size: 14px; 
   }
 
   .profile-pic img {
     width: 70px;
-    height: 70px; /* Ukuran gambar lebih kecil */
+    height: 70px; 
   }
 
   .motivation p {
     font-size: 11px;
-    -webkit-line-clamp: 2; /* Kurangi jumlah baris teks */
+    -webkit-line-clamp: 2;
   }
 }
