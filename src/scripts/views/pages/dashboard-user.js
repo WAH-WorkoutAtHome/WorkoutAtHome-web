@@ -151,12 +151,6 @@ const DashboardUser = {
             </div>
           </div>
         </section>
-
-            <!-- Chat Widget -->
-    <div class="chat-widget">
-      <img src="./images/icon/chatbot.png" alt="Chat Widget">
-    </div>
-
     
       `;
   },
