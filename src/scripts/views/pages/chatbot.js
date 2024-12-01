@@ -3,8 +3,7 @@ const Chatbot = {
     return `
     <style>
       #chatContainer {
-        max-width: 600px;
-        margin: 50px auto;
+        margin: 30px 5px 10px 5px;
         background-color: #f9f9f9;
         border: 1px solid #ddd;
         border-radius: 10px;

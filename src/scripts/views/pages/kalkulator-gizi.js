@@ -28,6 +28,7 @@ const KalkulatorGizi = {
           display: flex;
           gap: 50px;
           justify-content: center;
+          margin-top: 30px;
         }
 
         @media screen and (max-width: 800px) {

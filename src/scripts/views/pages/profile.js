@@ -9,19 +9,19 @@ const Profile = {
           display: flex;
           flex-direction: column;
         }
-
+        
         .profile-container {
           background-color: white;
           padding: 20px;
           border-radius: 24px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          width: 700px;
+          min-width: 200px;
           display: flex;
           flex-direction: column;
           gap: 20px;
           margin-top: 10px;
-          margin-left: auto;
-          margin-right: auto;
+          margin-left: 30px;
+          margin-right: 30px;
           margin-bottom: 50px;
         }
 
@@ -70,7 +70,7 @@ const Profile = {
           background-color: #6CF3E5;
           border: none;
           border-radius: 30px;
-          font-size: 16px;
+          font-size: 12px;
           font-weight: 700;
           cursor: pointer;
           color: #000;
@@ -86,7 +86,7 @@ const Profile = {
           background-color: #ff5e57;
           border: none;
           border-radius: 30px;
-          font-size: 16px;
+          font-size: 12px;
           font-weight: 700;
           cursor: pointer;
           color: white;
@@ -163,17 +163,17 @@ const Profile = {
 
     // Isi formulir dengan data yang tersimpan
     function populateForm(data) {
-      document.getElementById('nama').value = data.nama || '';
-      document.getElementById('gender').value = data.gender || '';
-      document.getElementById('dob').value = data.dob || '';
-      document.getElementById('height').value = data.height || '';
-      document.getElementById('weight').value = data.weight || '';
+      document.getElementById("nama").value = data.nama || "";
+      document.getElementById("gender").value = data.gender || "";
+      document.getElementById("dob").value = data.dob || "";
+      document.getElementById("height").value = data.height || "";
+      document.getElementById("weight").value = data.weight || "";
     }
 
     // Nonaktifkan input form secara default
     function toggleFormEditable(isEditable) {
-      const inputs = profileForm.querySelectorAll('input, select');
-      inputs.forEach(input => {
+      const inputs = profileForm.querySelectorAll("input, select");
+      inputs.forEach((input) => {
         input.disabled = !isEditable;
       });
     }
@@ -183,44 +183,50 @@ const Profile = {
     toggleFormEditable(false);
 
     // Event listener untuk tombol "Ubah Profile"
-    updateButton.addEventListener('click', (event) => {
+    updateButton.addEventListener("click", (event) => {
       event.preventDefault();
-      const isEditing = updateButton.textContent === 'Simpan Perubahan';
-      
+      const isEditing = updateButton.textContent === "Simpan Perubahan";
+
       if (isEditing) {
         // Simpan data baru
         const formData = new FormData(profileForm);
         const updatedBiodata = {
-          nama: formData.get('nama').trim(),
-          gender: formData.get('gender'),
-          dob: formData.get('dob'),
-          height: formData.get('height'),
-          weight: formData.get('weight'),
+          nama: formData.get("nama").trim(),
+          gender: formData.get("gender"),
+          dob: formData.get("dob"),
+          height: formData.get("height"),
+          weight: formData.get("weight"),
         };
 
         // Validasi input
-        if (!updatedBiodata.nama || !updatedBiodata.gender || !updatedBiodata.dob || !updatedBiodata.height || !updatedBiodata.weight) {
-          alert('Semua kolom wajib diisi!');
+        if (
+          !updatedBiodata.nama ||
+          !updatedBiodata.gender ||
+          !updatedBiodata.dob ||
+          !updatedBiodata.height ||
+          !updatedBiodata.weight
+        ) {
+          alert("Semua kolom wajib diisi!");
           return;
         }
 
         // Simpan ke localStorage
-        localStorage.setItem('userBiodata', JSON.stringify(updatedBiodata));
-        alert('Profil berhasil diperbarui!');
-        updateButton.textContent = 'Ubah Profile';
+        localStorage.setItem("userBiodata", JSON.stringify(updatedBiodata));
+        alert("Profil berhasil diperbarui!");
+        updateButton.textContent = "Ubah Profile";
         toggleFormEditable(false);
       } else {
         // Aktifkan mode edit
         toggleFormEditable(true);
-        updateButton.textContent = 'Simpan Perubahan';
+        updateButton.textContent = "Simpan Perubahan";
       }
     });
 
     // Event listener untuk tombol logout
-    logoutButton.addEventListener('click', () => {
-      localStorage.removeItem('userToken');
-      localStorage.removeItem('userBiodata');
-      window.location.href = '/#/dashboard-guest';
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("userToken");
+      localStorage.removeItem("userBiodata");
+      window.location.href = "/#/dashboard-guest";
     });
   },
 };

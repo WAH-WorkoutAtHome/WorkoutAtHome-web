@@ -25,22 +25,40 @@ const NavbarUser = {
     `;
   },
 
+  //
+  // Ada beberapa perubahan dibagian after render sampai sebelum export default NavbarGuest
+  //
   async afterRender() {
     const hamburgerButton = document.querySelector("#hamburgerButton");
     const navigationDrawer = document.querySelector("#navigationDrawer");
 
-    // Toggle navigation drawer
-    hamburgerButton?.addEventListener("click", () => {
-      navigationDrawer?.classList.toggle("open");
+    hamburgerButton.addEventListener("click", () => {
+      const isOpen = navigationDrawer.classList.contains("open");
+
+      if (isOpen) {
+        // Menutup menu dengan transisi halus
+        navigationDrawer.style.maxHeight = "0";
+        navigationDrawer.classList.remove("open");
+      } else {
+        // Menampilkan menu dengan transisi halus
+        navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
+        navigationDrawer.classList.add("open");
+      }
     });
 
+    // Menutup menu jika klik di luar navigasi
     window.addEventListener("click", (event) => {
       if (
-        !navigationDrawer?.contains(event.target) &&
-        !hamburgerButton?.contains(event.target)
+        !navigationDrawer.contains(event.target) &&
+        !hamburgerButton.contains(event.target)
       ) {
-        navigationDrawer?.classList.remove("open");
+        navigationDrawer.classList.remove("open");
+        navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
       }
+    });
+
+    hamburgerButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Mencegah event klik menutup menu
     });
   },
 };
