@@ -267,7 +267,7 @@ body {
   max-width: 100%; /* Mencegah konten meluas */
   box-sizing: border-box;
   margin: 0 auto; /* Memastikan elemen berada di tengah */
-  padding: 0 16px; /* Tambahkan padding responsif */
+  padding: 12px 16px; /* Tambahkan padding responsif */
 }
 
 /* Mengatur padding dan margin elemen */

@@ -6,16 +6,15 @@ import Footer from "../utils/footer";
 
 class App {
   constructor({ header, content, footer }) {
-    this._header = header; // Elemen header
-    this._content = content; // Elemen main content
-    this._footer = footer; // Elemen footer
+    this._header = header;
+    this._content = content;
+    this._footer = footer;
   }
 
   async _renderHeader() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const { resource } = url;
 
-    // Tentukan navbar berdasarkan halaman
     if (resource === "dashboard-guest" || resource === "biodata") {
       this._header.innerHTML = await NavbarGuest.render();
       await NavbarGuest.afterRender();
@@ -25,8 +24,8 @@ class App {
       resource === "tutorial" ||
       resource === "kalkulator-gizi" ||
       resource === "profile" ||
-      resource === 'tutorial' ||
-      resource === 'chatbot' ||
+      resource === "tutorial" ||
+      resource === "chatbot" ||
       localStorage.getItem("userToken")
     ) {
       this._header.innerHTML = await NavbarUser.render();
@@ -38,29 +37,29 @@ class App {
   }
 
   async _renderFooter() {
-    // Render footer di semua halaman
     this._footer.innerHTML = await Footer.render();
     await Footer.afterRender();
   }
 
   async renderPage() {
-    // Render header sesuai halaman
     await this._renderHeader();
-
-    // Render footer di semua halaman
     await this._renderFooter();
 
-    // Render main content
     const url = UrlParser.parseActiveUrlWithCombiner();
-    console.log(url);
+    console.log(`URL aktif: ${url}`);
 
-    const page = routes[url];
-    // console.log(page);
+    const page = routes[url.split("?")[0]];
+    if (!page) {
+      console.error(`Rute tidak ditemukan untuk URL: ${url}`);
+      this._content.innerHTML = "<h1>Halaman tidak ditemukan</h1>";
+      return;
+    }
+
+    console.log(`Halaman yang ditemukan:`, page);
 
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }
 }
-
 
 export default App;

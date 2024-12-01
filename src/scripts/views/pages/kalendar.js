@@ -1,33 +1,158 @@
 const Kalendar = {
   render() {
     return `
-      <!-- Hero Section -->
-      <section class="hero-calendar" id="hero-calendar">
-        <div class="hero-content-calendar">
-          <h1 class="hero-title">Mulai Program Olahraga <br>di Rumah Anda!</br></h1>
-          <p class="hero-quote-calendar">Apakah Anda ingin mencapai tujuan kebugaran tanpa harus pergi ke gym? Dengan fitur penjadwalan olahraga di rumah, Anda dapat merencanakan latihan yang sesuai dengan tujuan dan gaya hidup Anda — langsung dari kenyamanan rumah! Kami akan membantu Anda membuat jadwal latihan yang efektif dan aman, dengan latihan yang bisa dilakukan tanpa peralatan mahal. Cukup klik tombol di bawah ini untuk menyinkronkan jadwal olahraga Anda.</p>
-          <button class="join-button" id="auth-calendar-button">Sinkronkan Jadwal</button>
-        </div>
-        <div class="hero-images-user">
-          <img class="lazyload" data-src="./images/heroes/kalendar.jpg" alt="Workout 2">
-        </div>
-      </section>
+    <style>
+     
+      .popup-hidden {
+        display: none !important;
+      }
+
+      .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+      }
+
+      .popup-content {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        max-width: 90%;
+        animation: popupFadeIn 0.5s ease-out;
+      }
+
+      @keyframes popupFadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .popup h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+      }
+
+      .popup label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .popup select,
+      .popup input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .popup button {
+        width: 48%;
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .popup-submit {
+        background-color: #28a745;
+        color: #fff;
+      }
+
+      .popup-close {
+        background-color: #dc3545;
+        color: #fff;
+        float: right;
+      }
+
+      .popup button:hover {
+        opacity: 0.9;
+      }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="hero-calendar" id="hero-calendar">
+      <div class="hero-content-calendar">
+        <h1 class="hero-title">Mulai Program Olahraga <br>di Rumah Anda!</h1>
+        <p class="hero-quote-calendar">Apakah Anda ingin mencapai tujuan kebugaran tanpa harus pergi ke gym? Dengan fitur penjadwalan olahraga di rumah, Anda dapat merencanakan latihan yang sesuai dengan tujuan dan gaya hidup Anda — langsung dari kenyamanan rumah! Kami akan membantu Anda membuat jadwal latihan yang efektif dan aman, dengan latihan yang bisa dilakukan tanpa peralatan mahal. Cukup klik tombol di bawah ini untuk menyinkronkan jadwal olahraga Anda.</p>
+        <button class="join-button" id="auth-calendar-button">Sinkronkan Jadwal</button>
+      </div>
+      <div class="hero-images-user">
+        <img class="lazyload" data-src="./images/heroes/kalendar.jpg" alt="Workout 2">
+      </div>
+    </section>
+
+    <!-- Pop-up Form -->
+    <div id="schedule-popup" class="popup popup-hidden">
+      <div class="popup-content">
+        <h2>Buat Jadwal Baru</h2>
+        <form id="schedule-form">
+          <label for="target">Target</label>
+          <select id="target" name="target" required>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="weight_gain">Weight Gaun</option>
+            <option value="muscle_building">Gain Muscle</option>
+            <option value="maintenance">Maintenance</option>
+          </select>
+
+          <label for="start-date">Tanggal Mulai</label>
+          <input type="date" id="start-date" name="startDate" required />
+
+          <button type="submit" class="popup-submit">Jadwalkan</button>
+          <button type="button" id="popup-close" class="popup-close">Batal</button>
+        </form>
+      </div>
+    </div>
     `;
   },
 
   async afterRender() {
-    const authButton = document.getElementById("auth-calendar-button");
+    console.log("Kalendar page is loaded");
+    window.location.hash = "#/kalendar";
 
-    // Menambahkan event listener untuk tombol autentikasi
+    const authButton = document.getElementById("auth-calendar-button");
+    const popup = document.getElementById("schedule-popup");
+    const closePopupButton = document.getElementById("popup-close");
+    const scheduleForm = document.getElementById("schedule-form");
+
+    let accessToken = localStorage.getItem("access_token");
+
+    // Show popup if token is available
+    if (accessToken) {
+      popup.classList.remove("popup-hidden");
+    }
+
+    // Step 1: Handle authentication button click
     authButton.addEventListener("click", async () => {
       try {
-        // Step 1: Dapatkan URL autentikasi
         const authResponse = await fetch("http://localhost:3000/calendar/auth");
         if (!authResponse.ok)
           throw new Error("Gagal mendapatkan URL autentikasi");
         const { url } = await authResponse.json();
 
-        // Step 2: Redirect pengguna ke URL autentikasi
+        // Redirect user to authentication URL
         window.location.href = url;
       } catch (error) {
         console.error("Error saat autentikasi kalender:", error);
@@ -37,41 +162,50 @@ const Kalendar = {
       }
     });
 
-    // Step 3: Jika sudah kembali dari OAuth2, ambil token
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get("code"); // Ambil kode dari query string
-    if (code) {
-      try {
-        const tokenResponse = await fetch(
-          `http://localhost:3000/calendar/oauth2callback?code=${code}`
-        );
-        if (!tokenResponse.ok) throw new Error("Gagal mendapatkan akses token");
-        const { tokens } = await tokenResponse.json();
-        console.log("Akses token:", tokens);
+    // Step 2: Close popup button
+    closePopupButton.addEventListener("click", () => {
+      popup.classList.add("popup-hidden");
+    });
 
-        // Step 4: Ambil data event
-        const eventsResponse = await fetch(
-          "http://localhost:3000/calendar/events",
+    // Step 3: Handle schedule form submission
+    scheduleForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const target = document.getElementById("target").value;
+      const startDate = document.getElementById("start-date").value;
+
+      if (!accessToken) {
+        alert("Token tidak ditemukan. Silakan login terlebih dahulu.");
+        return;
+      }
+
+      try {
+        const scheduleResponse = await fetch(
+          "http://localhost:3000/calendar/generate",
           {
-            method: "GET",
+            method: "POST",
             headers: {
-              Authorization: `Bearer ${tokens.accessToken}`, // Gunakan token untuk otorisasi
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${accessToken}`,
             },
+            body: JSON.stringify({
+              target,
+              startDate,
+              googleAuth: { access_token: accessToken },
+            }),
           }
         );
-        if (!eventsResponse.ok)
-          throw new Error("Gagal mendapatkan event kalender");
-        const events = await eventsResponse.json();
-        console.log("Event Kalender:", events);
 
-        alert("Sinkronisasi berhasil! Lihat konsol untuk detail event.");
+        if (!scheduleResponse.ok) throw new Error("Gagal membuat jadwal");
+        const result = await scheduleResponse.json();
+
+        alert("Jadwal berhasil dibuat! Detail: " + JSON.stringify(result));
+        popup.classList.add("popup-hidden");
       } catch (error) {
-        console.error("Error saat mengambil data event:", error);
-        alert(
-          "Gagal menyinkronkan jadwal. Pastikan Anda sudah memberikan akses."
-        );
+        console.error("Error saat membuat jadwal:", error);
+        alert("Gagal membuat jadwal. Silakan coba lagi.");
       }
-    }
+    });
   },
 };
 

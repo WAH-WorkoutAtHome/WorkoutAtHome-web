@@ -43,8 +43,8 @@ body {
 }
 
 .app-bar .app-bar__menu button:active {
-  background-color: #555555; 
-  transform: scale(0.95); 
+  background-color: #555555;
+  transform: scale(0.95);
 }
 
 .app-bar__brand {
@@ -101,7 +101,7 @@ body {
 }
 
 .app-bar .app-bar__navigation ul li a:active {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 #loginButton {
@@ -359,7 +359,7 @@ a {
 }
 
 .container-hero {
-  JUSTIFY-ITEMS: CENTER;
+  justify-items: CENTER;
   text-align: center;
 }
 

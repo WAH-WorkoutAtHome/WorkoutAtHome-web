@@ -10,9 +10,24 @@ import Chatbot from "../views/pages/chatbot";
 const getDefaultRoute = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
+  let accessToken = null;
+
+  const urlHash = window.location.hash;
+  console.log("URL Hash asdasd:", urlHash);
+
+  const regex = /access_token=([^&]+)/;
+  const match = urlHash.match(regex);
+
+  if (match) {
+    accessToken = match[1];
+    console.log("Access token:", accessToken);
+  } else {
+    console.log("Access token not found");
+  }
 
   const token = urlParams.get("token");
   const profileData = urlParams.get("profile");
+  // const accessToken = urlParams.get("access_token");
 
   if (token) {
     localStorage.setItem("userToken", token);
@@ -25,6 +40,10 @@ const getDefaultRoute = () => {
     } catch (error) {
       console.error("Failed to parse profile data", error);
     }
+  }
+
+  if (accessToken) {
+    localStorage.setItem("access_token", accessToken);
   }
 
   const userToken = localStorage.getItem("userToken");
