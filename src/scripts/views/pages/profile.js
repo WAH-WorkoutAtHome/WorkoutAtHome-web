@@ -112,7 +112,7 @@ const Profile = {
       </style>
 
       <div class="profile-container">
-        <h2>Ubah Profile</h2>
+        <h2>Profile</h2>
         <form id="profile-form">
           <div class="form-group">
             <label for="nama">Nama Pengguna</label>

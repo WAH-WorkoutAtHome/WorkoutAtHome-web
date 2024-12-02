@@ -1,17 +1,15 @@
-/* Mengatur body untuk menghindari scroll horizontal */
 html,
 body {
-  overflow-x: hidden; /* Menghilangkan scroll horizontal */
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Mengatur app-bar untuk responsivitas */
 @media screen and (min-width: 650px) {
   .app-bar {
     grid-template-columns: 1fr auto;
-    padding: 8px 16px; /* Mengurangi padding agar tidak terlalu lebar */
+    padding: 8px 16px; 
   }
 
   .app-bar .app-bar__brand h1 {
@@ -24,7 +22,7 @@ body {
 
   .app-bar .app-bar__navigation {
     position: static;
-    width: 100%; /* Menyesuaikan dengan lebar layar */
+    width: 100%; 
   }
 
   .app-bar .app-bar__navigation ul li {
@@ -43,14 +41,13 @@ body {
   }
 }
 
-/* Media query untuk ukuran layar kecil (max-width: 480px) */
 @media (max-width: 480px) {
   .team-container {
-    grid-template-columns: 1fr; /* Menjadi satu kolom */
+    grid-template-columns: 1fr; 
   }
 
   .hero-tutorial {
-    height: 150px; /* Menurunkan tinggi */
+    height: 150px; 
   }
 
   .hero-content {
@@ -66,17 +63,17 @@ body {
   }
 
   .video-grid {
-    gap: 8px; /* Menurunkan gap antar item video */
-    width: 100%; /* Menghindari ruang kosong */
+    gap: 8px;
+    width: 100%; 
   }
 
   .video-item {
-    border-radius: 5px; /* Menurunkan border radius */
+    border-radius: 5px;
   }
 
   .footer-container {
-    flex-direction: column; /* Menumpuk elemen footer */
-    align-items: center; /* Memusatkan elemen footer */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .footer-section {
@@ -85,7 +82,7 @@ body {
   }
 
   .footer-logo {
-    margin-bottom: 10px; /* Menambah jarak di bawah logo */
+    margin-bottom: 10px; 
   }
 
   .footer-bottom {
@@ -93,10 +90,9 @@ body {
   }
 }
 
-/* Media query untuk tablet (max-width: 800px) */
 @media (max-width: 800px) {
   .team-container {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .app-bar .app-bar__navigation {
@@ -105,17 +101,16 @@ body {
 
   .hero-user,
   .hero-calendar {
-    grid-template-columns: 1fr; /* Menjadi satu kolom */
+    grid-template-columns: 1fr; 
   }
 
   .container {
-    grid-template-columns: 1fr; /* Menjadi satu kolom */
-    width: 100%; /* Memastikan kontainer tidak menyisakan ruang kosong */
-    box-sizing: border-box; /* Menjaga padding dan margin dalam lebar total */
+    grid-template-columns: 1fr; 
+    width: 100%;
+    box-sizing: border-box; 
   }
 }
 
-/* Media query untuk tampilan lebih besar (min-width: 800px) */
 @media screen and (min-width: 800px) {
   .hero-user,
   .hero-calendar {
@@ -127,15 +122,14 @@ body {
   }
 
   .video-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk layar lebih besar */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 }
 
-/* Media query untuk ukuran layar besar (min-width: 850px) */
 @media screen and (min-width: 850px) {
   .features-grid {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .footer-section.logo-text {
@@ -148,19 +142,18 @@ body {
   }
 
   .hero-user {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .video-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk video */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
   }
 }
 
-/* Media query untuk layar lebih besar (min-width: 1000px) */
 @media screen and (min-width: 1000px) {
   .hero-calendar {
-    grid-template-columns: repeat(2, 1fr); /* Menjadi 2 kolom untuk kalender */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .video-grid {
@@ -169,7 +162,6 @@ body {
   }
 }
 
-/* Media query untuk ukuran layar lebih besar (min-width: 1200px) */
 @media screen and (min-width: 1200px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -199,7 +191,6 @@ body {
   }
 }
 
-/* Media query untuk tampilan lebih besar (min-width: 1600px) */
 @media screen and (min-width: 1600px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -230,55 +221,45 @@ body {
   }
 }
 
-/* Responsive Video Grid untuk layar kecil */
 @media (max-width: 768px) {
   .video-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk layar lebih kecil */
-    gap: 12px; /* Mengurangi jarak antar elemen */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px;
   }
 
   .video-item {
-    border-radius: 8px; /* Border radius lebih kecil */
+    border-radius: 8px; 
   }
 }
 
-/* Untuk ponsel (max-width: 375px) */
 @media (max-width: 375px) {
   .team-member h2 {
-    font-size: 14px; /* Ukuran font lebih kecil */
+    font-size: 14px; 
   }
 
   .profile-pic img {
     width: 70px;
-    height: 70px; /* Ukuran gambar lebih kecil */
+    height: 70px; 
   }
 
   .motivation p {
     font-size: 11px;
-    -webkit-line-clamp: 2; /* Mengurangi jumlah baris */
+    -webkit-line-clamp: 2; 
   }
 }
 
-/*  */
-/*  */
-/*Batas perubahan responsif*/
-/*  */
-/*  */
-
-/* Mengatur elemen grid untuk lebar penuh */
 .container,
 .app-bar,
 .video-grid,
 .team-container,
 .features-grid {
-  width: 100%; /* Pastikan elemen tidak melebihi lebar layar */
-  max-width: 100%; /* Mencegah konten meluas */
+  width: 100%; 
+  max-width: 100%; 
   box-sizing: border-box;
-  margin: 0 auto; /* Memastikan elemen berada di tengah */
-  padding: 12px 16px; /* Tambahkan padding responsif */
+  margin: 0 auto; 
+  padding: 12px 16px; 
 }
 
-/* Mengatur padding dan margin elemen */
 .app-bar__navigation ul {
   padding: 0;
   margin: 0;
@@ -300,24 +281,23 @@ textarea {
   max-width: 100%;
 }
 
-/* Responsivitas untuk layar kecil */
 @media (max-width: 480px) {
   .hero-content {
-    padding: 20px 8px; /* Mengurangi padding agar muat */
+    padding: 20px 8px; 
   }
 
   .hero-content h1 {
-    font-size: 1rem; /* Menyesuaikan ukuran font */
-    word-wrap: break-word; /* Bungkus kata panjang */
+    font-size: 1rem;
+    word-wrap: break-word;
   }
 
   .hero-content p {
     font-size: 0.75rem;
-    line-height: 1.2; /* Menurunkan tinggi baris untuk teks panjang */
+    line-height: 1.2; 
   }
 
   .video-grid {
-    grid-template-columns: 1fr; /* Menampilkan satu kolom */
+    grid-template-columns: 1fr; 
     gap: 8px;
   }
 
@@ -333,10 +313,9 @@ textarea {
   }
 }
 
-/* Media query untuk ukuran tablet */
 @media (max-width: 800px) {
   .team-container {
-    grid-template-columns: 1fr; /* Satu kolom */
+    grid-template-columns: 1fr; 
     gap: 16px;
   }
 
@@ -354,7 +333,6 @@ textarea {
   }
 }
 
-/* Media query untuk ukuran layar besar */
 @media (min-width: 1200px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -367,10 +345,9 @@ textarea {
   }
 }
 
-/* Media query untuk layar yang sangat besar */
 @media (min-width: 1600px) {
   .container {
-    max-width: 1200px; /* Batasi lebar maksimum */
+    max-width: 1200px; 
     margin: 0 auto;
   }
 
@@ -380,16 +357,13 @@ textarea {
   }
 }
 
-/* Mengatur tampilan untuk layar kecil (misalnya, di bawah 768px) */
 @media (max-width: 768px) {
-  /* Menyesuaikan lebar ul agar tidak terpotong */
   .app-bar .app-bar__navigation ul {
     display: block;
-    width: 100%; /* Memastikan ul menggunakan 100% lebar */
+    width: 100%;
     padding: 0;
   }
 
-  /* Menyesuaikan lebar li agar memenuhi layar */
   .app-bar .app-bar__navigation ul li {
     width: 100%; /* Setiap li akan menggunakan seluruh lebar */
     text-align: center; /* Membuat teks di dalam li terpusat */

@@ -141,22 +141,35 @@ body {
   gap: 1rem;
   z-index: 100;
   list-style-type: none;
+  display: grid;
 }
 
-.drawer-list ul{
+.drawer-list li {
+  list-style: none;
+}
+
+.drawer-list ul {
   display: flex;
-  align-items: center;
+  flex-direction: column; 
   gap: 1rem;
 }
 
-.drawer-list a{
+.drawer-list a {
   text-decoration: none;
   color: white;
   font-size: 1.1rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease-in-out;
 }
 
-.open{
+.drawer-list a:hover {
+  color: #4225eb; 
+}
+
+.drawer-list a:active {
+  color: #ffffff; 
+}
+
+.open {
   display: block;
 }
 
@@ -290,7 +303,7 @@ main {
 .hero-images-user img {
   max-width: 100%;
   height: auto;
-  object-fit: cover; /* Menjaga proporsi gambar tetap sesuai */
+  object-fit: cover; 
 }
 
 .profile-button img {
@@ -482,7 +495,7 @@ a {
   border-radius: 50%;
   text-align: center;
   line-height: 44px;
-  justify-self: end; /* Pindahkan tombol ke kanan */
+  justify-self: end; 
 }
 
 .about-section h1 {
@@ -541,12 +554,12 @@ a {
   background-color: #d5f9f6;
   padding: 10px;
   border-radius: 10px;
-  min-height: 120px; /* Tinggi minimum sama untuk semua card */
+  min-height: 120px; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Pusatkan isi secara vertikal */
-  align-items: center; /* Pusatkan isi secara horizontal */
-  text-align: center; /* Ratakan teks di tengah */
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
 }
 
 .motivation h3 {
@@ -589,7 +602,7 @@ a {
 
 .footer-logo {
   max-width: 50px;
-  margin-right: 20px; /* Menambahkan ruang antara logo dan paragraf */
+  margin-right: 20px; 
 }
 
 .footer-section h3 {
@@ -603,7 +616,7 @@ a {
 }
 
 .footer-section p {
-  flex: 1; /* Memberikan ruang untuk teks agar tidak saling tumpang tindih */
+  flex: 1;
 }
 
 .social-icons a {
@@ -630,11 +643,11 @@ a {
 }
 
 .search-container input {
-  width: 70%; /* Perkecil untuk memberikan ruang pada tombol */
+  width: 70%; 
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px; /* Ujung kiri dibulatkan */
+  border-radius: 5px 0 0 5px; 
   outline: none;
 }
 
@@ -642,17 +655,16 @@ a {
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #ccc;
-  background-color: #5a5959; /* Warna hijau untuk tombol */
-  color: white;
+  background-color: #5a5959; 
   cursor: pointer;
-  border-radius: 0 5px 5px 0; /* Ujung kanan dibulatkan */
+  border-radius: 0 5px 5px 0; 
   transition: background-color 0.3s ease;
 }
 
 .search-container button:hover {
-  background-color: #232222; /* Warna hijau lebih gelap saat hover */
+  background-color: #232222; 
 }
 
 .search-container button:active {
-  background-color: #5b5b5b; /* Warna lebih gelap saat tombol ditekan */
+  background-color: #5b5b5b; 
 }
