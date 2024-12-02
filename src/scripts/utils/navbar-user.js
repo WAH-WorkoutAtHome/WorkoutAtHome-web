@@ -22,6 +22,7 @@ const NavbarUser = {
           </li>
         </ul>
       </nav>
+
     `;
   },
 
@@ -31,18 +32,25 @@ const NavbarUser = {
   async afterRender() {
     const hamburgerButton = document.querySelector("#hamburgerButton");
     const navigationDrawer = document.querySelector("#navigationDrawer");
+    const drawer = document.querySelector("#drawer");
+
+
 
     hamburgerButton.addEventListener("click", () => {
       const isOpen = navigationDrawer.classList.contains("open");
+
+      
 
       if (isOpen) {
         // Menutup menu dengan transisi halus
         navigationDrawer.style.maxHeight = "0";
         navigationDrawer.classList.remove("open");
+        drawer.classList.remove('open');
       } else {
         // Menampilkan menu dengan transisi halus
         navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
         navigationDrawer.classList.add("open");
+        drawer.classList.add('open');
       }
     });
 
@@ -53,6 +61,7 @@ const NavbarUser = {
         !hamburgerButton.contains(event.target)
       ) {
         navigationDrawer.classList.remove("open");
+        drawer.classList.remove("open");
         navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
       }
     });
