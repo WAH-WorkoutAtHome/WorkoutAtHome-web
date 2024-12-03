@@ -93,7 +93,7 @@ Proyek ini dilisensikan di bawah [Nama Lisensi]. Lihat file `LICENSE` untuk info
 
 Jika Anda memiliki pertanyaan atau saran, silakan hubungi kami di:
 
-- **Email**: wah@supportus.com
-- **Telepon**: +111 222 333
+- **Email**: workoutathome5824@gmail.com
+- **Telepon**: +62 895-2471-8234
 
 Terima kasih telah menggunakan **Workout At Home (WAH)**! Kami berharap aplikasi ini membantu Anda mencapai tujuan kebugaran Anda. 🚀
