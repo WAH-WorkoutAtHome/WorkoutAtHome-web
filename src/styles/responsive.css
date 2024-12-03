@@ -186,6 +186,7 @@
   .video-grid {
     grid-template-columns: repeat(2, 1fr); 
     gap: 12px;
+    justify-self: center;
   }
 
   .video-item {
