@@ -1,15 +1,18 @@
 const DashboardUser = {
   async render() {
-    const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {
+    // const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {
+    //   name: "User",
+    //   email: "",
+    // };
+    const userBiodata = JSON.parse(localStorage.getItem("userBiodata")) || {
       name: "User",
-      email: "",
     };
 
     return `
         <!-- Hero Section -->
         <section class="hero-user" id="hero-user">
         <div class="hero-content-user">
-          <h1 class="hero-title">Selamat Datang, ${userProfile.name}</h1>
+          <h1 class="hero-title">Selamat Datang, ${userBiodata.nama}</h1>
           <p class="hero-quote-user">Mulai perjalanan kebugaran Anda di sini dan capai tujuan sehat dengan latihan yang bisa dilakukan di rumah.</p>
           <button class="join-button"><a href="/#/tutorial">Mulai Sekarang</a></button>
         </div>

@@ -112,7 +112,7 @@ const Kalendar = {
           <label for="target">Target</label>
           <select id="target" name="target" required>
             <option value="weight_loss">Weight Loss</option>
-            <option value="weight_gain">Weight Gaun</option>
+            <option value="core_strength">Core Strength</option>
             <option value="muscle_building">Gain Muscle</option>
             <option value="maintenance">Maintenance</option>
           </select>
