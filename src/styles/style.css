@@ -596,14 +596,14 @@ a {
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #ccc;
-  background-color: #5a5959; 
+  background-color: #c5c2c2; 
   cursor: pointer;
   border-radius: 0 5px 5px 0; 
   transition: background-color 0.3s ease;
 }
 
 .search-container button:hover {
-  background-color: #232222; 
+  background-color: #969393; 
 }
 
 .search-container button:active {
