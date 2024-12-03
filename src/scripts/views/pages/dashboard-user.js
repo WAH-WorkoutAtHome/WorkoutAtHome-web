@@ -5,7 +5,7 @@ const DashboardUser = {
     //   email: "",
     // };
     const userBiodata = JSON.parse(localStorage.getItem("userBiodata")) || {
-      name: "User",
+      nama: "User",
     };
 
     return `

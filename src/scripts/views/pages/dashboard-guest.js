@@ -1,6 +1,6 @@
 const DashboardGuest = {
-    async render() {
-      return `
+  async render() {
+    return `
       
         <!-- Hero Section -->
         <section class="hero" id="hero">
@@ -150,26 +150,25 @@ const DashboardGuest = {
           </div>
         </section>
       `;
-    },
-  
-    async afterRender() {
-      const loginButton = document.querySelectorAll('.loginButton');
-      const googleLogin = () => {
-        // Redireksi ke server OAuth (backend)
-        window.location.href = 'http://localhost:3000/auth/google';
-      };
-  
-      loginButton.forEach(el => {
-        el.addEventListener('click', googleLogin);
-      });
-  
-      // Cek login
-      const userToken = localStorage.getItem('userToken');
-      if (userToken) {
-        window.location.href = '/#/biodata';
-      }
-    },
+  },
+
+  async afterRender() {
+    const loginButton = document.querySelectorAll(".loginButton");
+    const googleLogin = () => {
+      // Redireksi ke server OAuth (backend)
+      window.location.href = "http://localhost:3000/auth/google";
+    };
+
+    loginButton.forEach((el) => {
+      el.addEventListener("click", googleLogin);
+    });
+
+    // Cek login
+    const userToken = localStorage.getItem("userToken");
+    if (userToken) {
+      window.location.href = "/#/biodata";
+    }
+  },
 };
-  
-  export default DashboardGuest;
-  
+
+export default DashboardGuest;
