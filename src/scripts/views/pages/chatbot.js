@@ -2,38 +2,39 @@ const Chatbot = {
   render() {
     return `
     <style>
+
+      
       #chatContainer {
-        margin: 30px 5px 10px 5px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
+        padding: 50px;
+        height: 500px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         font-family: 'Arial', sans-serif;
       }
 
       h1 {
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-        background: #000;
-        color: white;
-        font-size: 1.8em;
-        font-weight: bold;
+        background-color: #0078d7;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 100%;
+        margin: 0 0 15px;
+        font-size: 18px;
+        color: #fff;
       }
 
       .chat-body {
+      border-radius: 10px;
         flex: 1;
         padding: 15px;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        max-height: 400px;
-        background-color: #6CF3E5;
+        max-height: 100%;
         scroll-behavior: smooth;
+        background-color: #6CF3E5;
       }
 
       .chat-message {
@@ -139,9 +140,15 @@ const Chatbot = {
         }
       }
 
+      @media (max-width: 600px) {
+        #chatContainer {
+          padding: 20px;
+        }
+      }
+
       #inputContainer {
+        gap: 15px;
         display: flex;
-        border-top: 1px solid #ddd;
         align-items: center;
       }
 
@@ -151,6 +158,7 @@ const Chatbot = {
         padding: 15px;
         font-size: 14px;
         outline: none;
+        border-radius: 8px;
       }
 
       #sendButton {
@@ -161,6 +169,7 @@ const Chatbot = {
         cursor: pointer;
         font-size: 14px;
         transition: background-color 0.3s ease;
+        border-radius: 8px;
       }
 
       #sendButton:hover {
@@ -172,12 +181,15 @@ const Chatbot = {
       }
     </style>
     <div id="chatContainer">
+    <div class="chat-body">
       <h1>WAH Bot</h1>
-      <div id="chatBody" class="chat-body"></div>
-      <div id="inputContainer">
-        <input id="prompt" type="text" placeholder="Ketik pesan Anda..." />
-        <button id="sendButton">Kirim</button>
-      </div>
+          <div id="chatBody" class="chat-body"></div>
+          <div id="inputContainer">
+            <input id="prompt" type="text" placeholder="Ketik pesan Anda..." />
+            <button id="sendButton">Kirim</button>
+          </div>
+    </div>
+      
     </div>
     `;
   },
