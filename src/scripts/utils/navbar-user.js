@@ -26,48 +26,18 @@ const NavbarUser = {
     `;
   },
 
-  //
-  // Ada beberapa perubahan dibagian after render sampai sebelum export default NavbarGuest
-  //
   async afterRender() {
-    const hamburgerButton = document.querySelector("#hamburgerButton");
-    const navigationDrawer = document.querySelector("#navigationDrawer");
-    const drawer = document.querySelector("#drawer");
+    const hamburgerButton = document.querySelector('#hamburgerButton');
+    const navigationDrawer = document.querySelector('#navigationDrawer');
 
-
-
-    hamburgerButton.addEventListener("click", () => {
-      const isOpen = navigationDrawer.classList.contains("open");
-
-      
-
-      if (isOpen) {
-        // Menutup menu dengan transisi halus
-        navigationDrawer.style.maxHeight = "0";
-        navigationDrawer.classList.remove("open");
-        drawer.classList.remove('open');
-      } else {
-        // Menampilkan menu dengan transisi halus
-        navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
-        navigationDrawer.classList.add("open");
-        drawer.classList.add('open');
-      }
+    hamburgerButton.addEventListener('click', () => {
+      navigationDrawer.classList.toggle('open');
     });
 
-    // Menutup menu jika klik di luar navigasi
-    window.addEventListener("click", (event) => {
-      if (
-        !navigationDrawer.contains(event.target) &&
-        !hamburgerButton.contains(event.target)
-      ) {
-        navigationDrawer.classList.remove("open");
-        drawer.classList.remove("open");
-        navigationDrawer.style.maxHeight = navigationDrawer.scrollHeight + "px";
+    window.addEventListener('click', (event) => {
+      if (!navigationDrawer.contains(event.target) && !hamburgerButton.contains(event.target)) {
+        navigationDrawer.classList.remove('open');
       }
-    });
-
-    hamburgerButton.addEventListener("click", (event) => {
-      event.stopPropagation(); // Mencegah event klik menutup menu
     });
   },
 };
