@@ -250,7 +250,7 @@ const KalkulatorGizi = {
 
       try {
         const response = await fetch(
-          "http://localhost:3000/calculator/calories",
+          "https://workoutathome.pemweb.cloud/calculator/calories",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

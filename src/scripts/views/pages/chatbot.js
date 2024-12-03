@@ -235,13 +235,16 @@ const Chatbot = {
     inputElement.value = ""; // Kosongkan input
 
     try {
-      const response = await fetch("http://localhost:3000/chatbot", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt }),
-      });
+      const response = await fetch(
+        "https://workoutathome.pemweb.cloud/chatbot",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Gagal menghubungi server. Coba lagi nanti.");

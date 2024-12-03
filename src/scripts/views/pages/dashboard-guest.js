@@ -156,7 +156,7 @@ const DashboardGuest = {
     const loginButton = document.querySelectorAll(".loginButton");
     const googleLogin = () => {
       // Redireksi ke server OAuth (backend)
-      window.location.href = "http://localhost:3000/auth/google";
+      window.location.href = "https://workoutathome.pemweb.cloud/auth/google";
     };
 
     loginButton.forEach((el) => {

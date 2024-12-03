@@ -147,7 +147,9 @@ const Kalendar = {
     // Step 1: Handle authentication button click
     authButton.addEventListener("click", async () => {
       try {
-        const authResponse = await fetch("http://localhost:3000/calendar/auth");
+        const authResponse = await fetch(
+          "https://workoutathome.pemweb.cloud/calendar/auth"
+        );
         if (!authResponse.ok)
           throw new Error("Gagal mendapatkan URL autentikasi");
         const { url } = await authResponse.json();
@@ -181,7 +183,7 @@ const Kalendar = {
 
       try {
         const scheduleResponse = await fetch(
-          "http://localhost:3000/calendar/generate",
+          "https://workoutathome.pemweb.cloud/calendar/generate",
           {
             method: "POST",
             headers: {
