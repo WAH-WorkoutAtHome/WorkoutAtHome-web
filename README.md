@@ -22,8 +22,7 @@
 - **HTML**: Struktur dasar aplikasi.
 - **CSS**: Styling untuk tampilan aplikasi, termasuk fitur responsif.
 - **JavaScript**: Interaktivitas dan logika aplikasi.
-- **API Integration**: Untuk mendukung fitur kalkulator gizi, penjadwalan, dan chatbot.
-- **[Framework - Opsional]**: Jika Anda menggunakan framework seperti React, Vue, atau lainnya.
+- **API Integration**: Untuk mendukung fitur kalkulator gizi, penjadwalan, dan chatbot kami menggunakan Google OAuth, Gemini API, dan Google Calendar API.
 
 ---
 
