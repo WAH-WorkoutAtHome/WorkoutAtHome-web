@@ -1,6 +1,6 @@
 const Footer = {
-    render() {
-      return `
+  render() {
+    return `
       <section  class="footer">
       <div class="footer-container">
             <div class="footer-section logo-text">
@@ -9,8 +9,8 @@ const Footer = {
             </div>
             <div class="footer-section">
                 <h3>KONTAK KAMI</h3>
-                <p>Email: wah@supportus.com</p>
-                <p>Phone: +111 222 333</p>
+                <p>Email: workoutathome5824@gmail.com</p>
+                <p>Phone: +62 895-2471-8234</p>
             </div>
             <div class="footer-section">
                 <h3>IKUTI KAMI</h3>
@@ -26,11 +26,9 @@ const Footer = {
         </div>
         </section>
         `;
-    },
+  },
 
-    async afterRender() {
-    
-      },
-    };
-  
-  export default Footer;
+  async afterRender() {},
+};
+
+export default Footer;
