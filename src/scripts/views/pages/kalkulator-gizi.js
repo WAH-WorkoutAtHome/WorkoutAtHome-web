@@ -39,6 +39,12 @@ const KalkulatorGizi = {
             }
         }
 
+        @media (max-width: 600px) {
+          .container {
+            padding: 40px;
+          }
+        }
+
         .box {
           background-color: #fff;
           border-radius: 10px;

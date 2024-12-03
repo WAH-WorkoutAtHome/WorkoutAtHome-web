@@ -85,7 +85,7 @@ const Tutorial = {
       <div class="video-grid">
           <iframe class="lazyload" data-src="https://www.youtube.com/embed/a-V4Or5xyis?si=vdhcF3iAmJ65WfEf" allowfullscreen></iframe>
           <iframe class="lazyload" data-src="https://www.youtube.com/embed/yH5qEZDfZtM?si=bBfvgqMZivx6Tzc2" allowfullscreen></iframe>
-          <iframe class="lazyload" data-="https://www.youtube.com/embed/dj03_VDetdw?si=7s6l-OMRKI79TmVr" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/dj03_VDetdw?si=7s6l-OMRKI79TmVr" allowfullscreen></iframe>
           <iframe class="lazyload" data-src="https://www.youtube.com/embed/yXHgcYpUVD4?si=HLKy5XUejb24eQB7" allowfullscreen></iframe>
           <iframe class="lazyload" data-src="https://www.youtube.com/embed/W5IiasNutB8?si=aiuadA5MZTT8WxS3" allowfullscreen></iframe>
       </div>
@@ -105,25 +105,25 @@ const Tutorial = {
   },
 
   async afterRender() {
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const sections = document.querySelectorAll('section[data-category]');
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
+    const sections = document.querySelectorAll("section[data-category]");
 
     const filterSections = () => {
       const query = searchInput.value.toLowerCase();
 
       sections.forEach((section) => {
-        const category = section.getAttribute('data-category').toLowerCase();
+        const category = section.getAttribute("data-category").toLowerCase();
         if (category.includes(query)) {
-          section.style.display = ''; 
+          section.style.display = "";
         } else {
-          section.style.display = 'none'; 
+          section.style.display = "none";
         }
       });
     };
 
-    searchInput.addEventListener('input', filterSections);
-    searchButton.addEventListener('click', filterSections);
+    searchInput.addEventListener("input", filterSections);
+    searchButton.addEventListener("click", filterSections);
   },
 };
 
