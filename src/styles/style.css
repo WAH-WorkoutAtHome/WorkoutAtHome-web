@@ -65,24 +65,23 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-  position: absolute;
-  top: 50px;
-  left: -180px;
-  width: 150px;
-  transition: all 0.3s;
-  padding: 8px;
-  overflow: hidden;
-  background-color: black;
+    top: 50px;
+    padding: 1rem;
+    left: -300px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    height: 100%;
 }
 
 .app-bar .app-bar__navigation.open {
   left: 0;
 }
 
-/* .app-bar .app-bar__navigation ul {
-  display: flex;
-  align-items: center;
-} */
+.app-bar .app-bar__navigation ul {
+  list-style-type: none;
+}
 
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
@@ -91,6 +90,14 @@ body {
   padding: 8px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  color: #4225eb;
+}
+
+.app-bar .app-bar__navigation ul li a:active {
+  color: #ffffff;
 }
 
 #loginButton {
