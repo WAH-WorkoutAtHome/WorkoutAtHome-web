@@ -262,7 +262,6 @@ const KalkulatorGizi = {
 
         const { data } = await response.json();
 
-        // Update the result section with the calculated values
         resultElement.innerHTML = `
           <h3>Angka Kecukupan Gizi Anda:</h3>
           <p><strong>Kalori:</strong> ${data.calories} kkal</p>
@@ -271,7 +270,6 @@ const KalkulatorGizi = {
           ${data.foodRecommendations}
         `;
 
-        // Format and display the food recommendations
         const foodSections = data.foodRecommendations.split("\n\n");
         const formattedRecommendations = foodSections
           .map((section) => {

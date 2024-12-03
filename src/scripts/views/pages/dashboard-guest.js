@@ -155,7 +155,6 @@ const DashboardGuest = {
   async afterRender() {
     const loginButton = document.querySelectorAll(".loginButton");
     const googleLogin = () => {
-      // Redireksi ke server OAuth (backend)
       window.location.href = "https://workoutathome.pemweb.cloud/auth/google";
     };
 
@@ -163,7 +162,6 @@ const DashboardGuest = {
       el.addEventListener("click", googleLogin);
     });
 
-    // Cek login
     const userToken = localStorage.getItem("userToken");
     if (userToken) {
       window.location.href = "/#/biodata";

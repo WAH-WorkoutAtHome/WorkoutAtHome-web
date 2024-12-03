@@ -27,7 +27,6 @@ const getDefaultRoute = () => {
 
   const token = urlParams.get("token");
   const profileData = urlParams.get("profile");
-  // const accessToken = urlParams.get("access_token");
 
   if (token) {
     localStorage.setItem("userToken", token);

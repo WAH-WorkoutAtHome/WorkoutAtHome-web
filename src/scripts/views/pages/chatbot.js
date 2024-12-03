@@ -217,13 +217,11 @@ const Chatbot = {
 
     const chatBody = document.getElementById("chatBody");
 
-    // Tambahkan pesan pengguna ke chat body
     const userMessage = document.createElement("div");
     userMessage.innerText = prompt;
     userMessage.className = "chat-message user-message";
     chatBody.appendChild(userMessage);
 
-    // Tampilkan pesan loading
     const loadingMessage = document.createElement("div");
     loadingMessage.className = "chat-message loading-message";
     loadingMessage.innerHTML = `
@@ -232,7 +230,7 @@ const Chatbot = {
     `;
     chatBody.appendChild(loadingMessage);
 
-    inputElement.value = ""; // Kosongkan input
+    inputElement.value = "";
 
     try {
       const response = await fetch(
@@ -251,18 +249,16 @@ const Chatbot = {
       }
 
       const data = await response.json();
-      loadingMessage.remove(); // Hapus pesan loading
+      loadingMessage.remove();
 
-      // Tambahkan pesan bot ke chat body
       const botMessage = document.createElement("div");
       botMessage.innerHTML = data.response || "Tidak ada respons dari server.";
       botMessage.className = "chat-message bot-message";
       chatBody.appendChild(botMessage);
 
-      // Scroll ke bawah untuk melihat pesan terbaru
       chatBody.scrollTop = chatBody.scrollHeight;
     } catch (error) {
-      loadingMessage.remove(); // Hapus pesan loading
+      loadingMessage.remove();
       const errorMessage = document.createElement("div");
       errorMessage.innerHTML = `<strong>Error:</strong> ${error.message}`;
       errorMessage.className = "chat-message error-message";

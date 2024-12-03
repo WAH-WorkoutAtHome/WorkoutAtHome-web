@@ -139,12 +139,10 @@ const Kalendar = {
 
     let accessToken = localStorage.getItem("access_token");
 
-    // Show popup if token is available
     if (accessToken) {
       popup.classList.remove("popup-hidden");
     }
 
-    // Step 1: Handle authentication button click
     authButton.addEventListener("click", async () => {
       try {
         const authResponse = await fetch(
@@ -154,7 +152,6 @@ const Kalendar = {
           throw new Error("Gagal mendapatkan URL autentikasi");
         const { url } = await authResponse.json();
 
-        // Redirect user to authentication URL
         window.location.href = url;
       } catch (error) {
         console.error("Error saat autentikasi kalender:", error);
@@ -164,12 +161,10 @@ const Kalendar = {
       }
     });
 
-    // Step 2: Close popup button
     closePopupButton.addEventListener("click", () => {
       popup.classList.add("popup-hidden");
     });
 
-    // Step 3: Handle schedule form submission
     scheduleForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 

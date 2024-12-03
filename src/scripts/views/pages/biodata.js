@@ -149,7 +149,6 @@ const Biodata = {
         weight: formData.get("weight"),
       };
 
-      // Simpan data ke localStorage
       localStorage.setItem("biodata", JSON.stringify(biodata));
       alert("Biodata berhasil disimpan!");
       window.location.href = "/#/dashboard-user";

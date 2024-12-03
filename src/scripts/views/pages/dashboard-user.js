@@ -1,9 +1,5 @@
 const DashboardUser = {
   async render() {
-    // const userProfile = JSON.parse(localStorage.getItem("userProfile")) || {
-    //   name: "User",
-    //   email: "",
-    // };
     const userBiodata = JSON.parse(localStorage.getItem("userBiodata")) || {
       nama: "User",
     };

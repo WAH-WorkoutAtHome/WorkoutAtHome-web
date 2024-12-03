@@ -155,13 +155,11 @@ const Profile = {
   },
 
   async afterRender() {
-    // Ambil elemen-elemen penting
     const savedData = JSON.parse(localStorage.getItem("userBiodata")) || {};
     const profileForm = document.querySelector("#profile-form");
     const updateButton = document.querySelector(".update-button");
     const logoutButton = document.getElementById("logout-button");
 
-    // Isi formulir dengan data yang tersimpan
     function populateForm(data) {
       document.getElementById("nama").value = data.nama || "";
       document.getElementById("gender").value = data.gender || "";
@@ -170,7 +168,6 @@ const Profile = {
       document.getElementById("weight").value = data.weight || "";
     }
 
-    // Nonaktifkan input form secara default
     function toggleFormEditable(isEditable) {
       const inputs = profileForm.querySelectorAll("input, select");
       inputs.forEach((input) => {
@@ -178,17 +175,14 @@ const Profile = {
       });
     }
 
-    // Set data ke form saat pertama kali di-load
     populateForm(savedData);
     toggleFormEditable(false);
 
-    // Event listener untuk tombol "Ubah Profile"
     updateButton.addEventListener("click", (event) => {
       event.preventDefault();
       const isEditing = updateButton.textContent === "Simpan Perubahan";
 
       if (isEditing) {
-        // Simpan data baru
         const formData = new FormData(profileForm);
         const updatedBiodata = {
           nama: formData.get("nama").trim(),
@@ -198,7 +192,6 @@ const Profile = {
           weight: formData.get("weight"),
         };
 
-        // Validasi input
         if (
           !updatedBiodata.nama ||
           !updatedBiodata.gender ||
@@ -210,19 +203,16 @@ const Profile = {
           return;
         }
 
-        // Simpan ke localStorage
         localStorage.setItem("userBiodata", JSON.stringify(updatedBiodata));
         alert("Profil berhasil diperbarui!");
         updateButton.textContent = "Ubah Profile";
         toggleFormEditable(false);
       } else {
-        // Aktifkan mode edit
         toggleFormEditable(true);
         updateButton.textContent = "Simpan Perubahan";
       }
     });
 
-    // Event listener untuk tombol logout
     logoutButton.addEventListener("click", () => {
       localStorage.removeItem("userToken");
       localStorage.removeItem("userBiodata");

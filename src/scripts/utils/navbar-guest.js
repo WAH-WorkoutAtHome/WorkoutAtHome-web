@@ -22,21 +22,21 @@ const NavbarGuest = {
     `;
   },
 
-  //
-  // Ada beberapa perubahan dibagian after render sampai sebelum export default NavbarGuest
-  //
   async afterRender() {
-    const hamburgerButton = document.querySelector('#hamburgerButton');
-    const navigationDrawer = document.querySelector('#navigationDrawer');
-    hamburgerButton.addEventListener('click', () => {
-      navigationDrawer.classList.toggle('open');
+    const hamburgerButton = document.querySelector("#hamburgerButton");
+    const navigationDrawer = document.querySelector("#navigationDrawer");
+    hamburgerButton.addEventListener("click", () => {
+      navigationDrawer.classList.toggle("open");
     });
-    window.addEventListener('click', (event) => {
-      if (!navigationDrawer.contains(event.target) && !hamburgerButton.contains(event.target)) {
-        navigationDrawer.classList.remove('open');
+    window.addEventListener("click", (event) => {
+      if (
+        !navigationDrawer.contains(event.target) &&
+        !hamburgerButton.contains(event.target)
+      ) {
+        navigationDrawer.classList.remove("open");
       }
     });
   },
 };
-  
-  export default NavbarGuest;
+
+export default NavbarGuest;
