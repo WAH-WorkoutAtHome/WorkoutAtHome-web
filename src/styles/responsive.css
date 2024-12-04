@@ -208,6 +208,10 @@
     font-size: 11px;
     -webkit-line-clamp: 2; 
   }
+
+  .search-container input {
+    margin-bottom: 20px;
+  }
 }
 
 
