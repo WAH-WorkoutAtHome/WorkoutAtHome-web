@@ -67,13 +67,15 @@ const Tutorial = {
     <section class="upper-body-container" data-category="upper body">
       <h2>Upper Body</h2>
       <div class="video-grid">
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/mm47bCaCzpQ?si=DOcjG2v2XSpULIl0" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/v1ywvzu0Eu4?si=2NaW4rSpc18XyqSk" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/0Yx_qbbzM0c?si=OuI937KXOMN3CtN4" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/bEesWO3qFKU?si=HiwsBf9I0caKpEt-" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/nBLl4U1ZfbE?si=G0xQZ9IvKHEmJSOU" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/KsXMJx9_Wj4?si=NWdBDVu3RcnYvIb7" allowfullscreen></iframe>
-          <iframe class="lazyload" data-src="https://www.youtube.com/embed/w1sFVRcpE2g?si=zGPmr7kZutt3DagY" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/QkXGl2qDRAQ?si=Ehij3Rtm1a-AHOvh" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/QY0z9fWDaBg?si=uGW19ic1Gc4cYmUl" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/q6ILEwkAsHQ?si=2OlL-O91_jOD0FhH" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/txsDESMfmbQ?si=Q_VrI2pzpfoUi5fZ" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/k8WW86osTGM?si=oFoG7T3LJXckZ8qs" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/PAwhOZgHju0?si=otIktKgmO5v9zhy6" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/4_QVAucWi2Y?si=2ghfNQ9xqqq457BD" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/RpFo2vMNr7I?si=u6ihxV12AgJidf3N" allowfullscreen></iframe>
+          <iframe class="lazyload" data-src="https://www.youtube.com/embed/YWF80Jl8mc4?si=2nl3bl3ybH1IcdaP" allowfullscreen></iframe>
       </div>
     </section>
 
