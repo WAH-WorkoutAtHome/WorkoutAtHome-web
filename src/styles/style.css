@@ -65,14 +65,14 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-    top: 50px;
-    padding: 1rem;
-    left: -300px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease-in-out;
-    position: fixed;
-    height: 100%;
+  top: 50px;
+  padding: 1rem;
+  left: -300px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  height: 100%;
 }
 
 .app-bar .app-bar__navigation.open {
@@ -102,16 +102,14 @@ body {
 
 #loginButton {
   padding: 10px 20px;
-    background-color: #6CF3E5;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #000;
+  background-color: #6cf3e5;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
 }
-
-
 
 main {
   flex: 1;
@@ -245,7 +243,7 @@ main {
 .hero-images-user img {
   max-width: 100%;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .profile-button img {
@@ -437,7 +435,7 @@ a {
   border-radius: 50%;
   text-align: center;
   line-height: 44px;
-  justify-self: end; 
+  justify-self: end;
 }
 
 .about-section h1 {
@@ -496,10 +494,10 @@ a {
   background-color: #d5f9f6;
   padding: 10px;
   border-radius: 10px;
-  min-height: 120px; 
+  min-height: 120px;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -544,7 +542,7 @@ a {
 
 .footer-logo {
   max-width: 50px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .footer-section h3 {
@@ -585,11 +583,11 @@ a {
 }
 
 .search-container input {
-  width: 70%; 
+  width: 70%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px; 
+  border-radius: 5px 0 0 5px;
   outline: none;
 }
 
@@ -597,16 +595,16 @@ a {
   padding: 10px 20px;
   font-size: 16px;
   border: 1px solid #ccc;
-  background-color: #c5c2c2; 
+  background-color: #c5c2c2;
   cursor: pointer;
-  border-radius: 0 5px 5px 0; 
+  border-radius: 0 5px 5px 0;
   transition: background-color 0.3s ease;
 }
 
 .search-container button:hover {
-  background-color: #969393; 
+  background-color: #969393;
 }
 
 .search-container button:active {
-  background-color: #5b5b5b; 
+  background-color: #5b5b5b;
 }
