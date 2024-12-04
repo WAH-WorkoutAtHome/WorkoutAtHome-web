@@ -85,7 +85,7 @@ Kami menyambut kontribusi dari Anda! Ikuti langkah berikut untuk berkontribusi p
 
 ## **Lisensi**
 
-Proyek ini dilisensikan di bawah [Nama Lisensi]. Lihat file `LICENSE` untuk informasi lebih lanjut.
+Proyek ini dilisensikan di bawah MIT. Lihat file `LICENSE` untuk informasi lebih lanjut.
 
 ---
 
